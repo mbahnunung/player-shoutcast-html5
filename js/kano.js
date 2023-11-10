@@ -7,7 +7,7 @@ var API_SERVICE = 'DEEZER';
 const URL_STREAMING = 'https://stream.zeno.fm/n4gzbe9ufzzuv';
 
 //PASTE YOUR MEDIA CP JSON URL HERE TO GET NOW PLAYING SONG TITLE.
-const MEDIACP_JSON_URL = ''
+const MEDIACP_JSON_URL = 'https://api.streamafrica.net/zeno/index.php?z=n4gzbe9ufzzuv'
 
 //API URL / if you use MEDIA CP, CHANGE THIS TO : https://api.streamafrica.net/metadata/mediacp.php?url='+MEDIACP_JSON_URL
 const API_URL = 'https://api.streamafrica.net/metadata/index.php?z='+URL_STREAMING
