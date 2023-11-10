@@ -1,10 +1,13 @@
-const RADIO_NAME = 'mbah nunung Online Radio';
+const RADIO_NAME = 'mbah nunung Online';
 
-// SELECT ARTWORK PROVIDER, ITUNES, DEEZER & SPOTIFY  eg : spotify 
+// SELECT ARTWORK PROVIDER, ITUNES, DEEZER & SPOTIFY or AZURACAST. eg : spotify 
 var API_SERVICE = 'spotify';
 
 // Change Stream URL Here, Supports, ICECAST, ZENO, SHOUTCAST, RADIOJAR and any other stream service.
 const URL_STREAMING = 'https://stream.zeno.fm/n4gzbe9ufzzuv';
+
+//PASTE YOUR MEDIA CP JSON URL HERE TO GET NOW PLAYING SONG TITLE.
+const MEDIACP_JSON_URL = ''
 
 //API URL / if you use MEDIA CP, CHANGE THIS TO : https://api.streamafrica.net/metadata/mediacp.php?url='+MEDIACP_JSON_URL
 const API_URL = 'https://api.streamafrica.net/metadata/index.php?z='+URL_STREAMING
@@ -66,7 +69,7 @@ function Page() {
         var $artistName = document.querySelectorAll('#historicSong article .music-info .artist');
 
         // Default cover art
-        var urlCoverArt = 'img/cover.png';
+        var urlCoverArt = 'images/cover.png';
 
         // Get cover art for song history
         var xhttp = new XMLHttpRequest();
@@ -105,7 +108,7 @@ function Page() {
 
     this.refreshCover = function (song = '', artist) {
         // Default cover art
-        var urlCoverArt = 'img/cover.png';
+        var urlCoverArt = 'images/cover.png';
 
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
@@ -117,6 +120,11 @@ function Page() {
                 var data = JSON.parse(this.responseText);
                 var artworkUrl100 = data.results;
                 var urlCoverArt = artworkUrl100.artwork;
+                var urlCoverArt2 = artworkUrl100.artwork_cdn;
+                
+                if (urlCoverArt == null){
+                    return urlCoverArt2;
+                }
 
                 coverArt.style.backgroundImage = 'url(' + urlCoverArt + ')';
                 coverArt.className = 'animated bounceInLeft';
@@ -181,8 +189,10 @@ function Page() {
     this.setVolume = function () {
         if (typeof (Storage) !== 'undefined') {
             var volumeLocalStorage = (!localStorage.getItem('volume')) ? 80 : localStorage.getItem('volume');
-            document.getElementById('volume').value = volumeLocalStorage;
-            document.getElementById('volIndicator').innerHTML = volumeLocalStorage;
+			setTimeout(function(){
+				document.getElementById('volume').value = volumeLocalStorage;
+            	document.getElementById('volIndicator').innerHTML = volumeLocalStorage;
+			}, 3000);
         }
     }
 
@@ -266,9 +276,24 @@ audio.onpause = function () {
 }
 
 // Unmute when volume changed
+// audio.onvolumechange = function () {
+//     if (audio.volume > 0) {
+//         audio.muted = false;
+//     }
+// }
+// Unmute when volume changed
 audio.onvolumechange = function () {
     if (audio.volume > 0) {
-        audio.muted = false;
+        audio.muted = false;        
+        var botmute = document.getElementById('playerMute');
+        if (botmute.className === 'fa fa-volume-off') {
+            botmute.className = 'fa fa-volume-up';
+        }
+    }else{
+        var botmute = document.getElementById('playerMute');
+        if (botmute.className === 'fa fa-volume-up') {
+            botmute.className = 'fa fa-volume-off';
+        }
     }
 }
 
@@ -280,12 +305,18 @@ audio.onerror = function () {
     }
 }
 
-document.getElementById('volume').oninput = function () {
-    audio.volume = intToDecimal(this.value);
+setTimeout(function(){
+    document.getElementById('volume').oninput = function () {
+        audio.volume = intToDecimal(this.value);    
+        var page = new Page();
+        page.changeVolumeIndicator(this.value);
+    }
+    document.getElementById("triggerToggle").addEventListener('click', function() {
+        slideToggle(document.getElementById("historicSong"), 400);
+    });
 
-    var page = new Page();
-    page.changeVolumeIndicator(this.value);
-}
+}, 3000);
+
 
 function togglePlay() {
     if (!audio.paused) {
@@ -315,17 +346,28 @@ function volumeDown() {
 }
 
 function mute() {
+    // togglePlay()
     if (!audio.muted) {
         document.getElementById('volIndicator').innerHTML = 0;
         document.getElementById('volume').value = 0;
         audio.volume = 0;
         audio.muted = true;
+
+        var botmute = document.getElementById('playerMute');
+        if (botmute.className === 'fa fa-volume-up') {
+            botmute.className = 'fa fa-volume-off';
+        }
     } else {
-        var localVolume = localStorage.getItem('volume');
-        document.getElementById('volIndicator').innerHTML = localVolume;
-        document.getElementById('volume').value = localVolume;
-        audio.volume = intToDecimal(localVolume);
+        // var localVolume = localStorage.getItem('volume');
+        document.getElementById('volIndicator').innerHTML = 50;
+        document.getElementById('volume').value = 50;
+        audio.volume = intToDecimal(50);
         audio.muted = false;
+
+        var botmute = document.getElementById('playerMute');
+        if (botmute.className === 'fa fa-volume-off') {
+            botmute.className = 'fa fa-volume-up';
+        }
     }
 }
 
@@ -356,9 +398,9 @@ function getStreamingData() {
             if (document.getElementById('currentSong').innerHTML !== song) {
                 page.refreshCover(currentSong, currentArtist);
                 page.refreshCurrentSong(currentSong, currentArtist);
-                page.refreshLyric(currentSong, currentArtist);
+                // page.refreshLyric(currentSong, currentArtist);
 
-                for (var i = 0; i < 2; i++) {
+                for (var i = 0; i < 4; i++) {
                     page.refreshHistoric(data.songHistory[i], i);
                 }
             }
@@ -537,3 +579,92 @@ function decimalToInt(vol) {
     return vol * 100;
 }
 
+/* show / hide historic songs */
+let slideUp = (target, duration=500) => {
+    target.style.transitionProperty = 'height, margin, padding';
+    target.style.transitionDuration = duration + 'ms';
+    target.style.boxSizing = 'border-box';
+    target.style.height = target.offsetHeight + 'px';
+    target.offsetHeight;
+    target.style.overflow = 'hidden';
+    target.style.height = 0;
+    target.style.paddingTop = 0;
+    target.style.paddingBottom = 0;
+    target.style.marginTop = 0;
+    target.style.marginBottom = 0;
+    window.setTimeout( () => {
+      target.style.display = 'none';
+      target.style.removeProperty('height');
+      target.style.removeProperty('padding-top');
+      target.style.removeProperty('padding-bottom');
+      target.style.removeProperty('margin-top');
+      target.style.removeProperty('margin-bottom');
+      target.style.removeProperty('overflow');
+      target.style.removeProperty('transition-duration');
+      target.style.removeProperty('transition-property');
+      //alert("!");
+    }, duration);
+  }
+
+  let slideDown = (target, duration=500) => {
+    target.style.removeProperty('display');
+    let display = window.getComputedStyle(target).display;
+
+    if (display === 'none')
+      display = 'block';
+
+    target.style.display = display;
+    let height = target.offsetHeight;
+    target.style.overflow = 'hidden';
+    target.style.height = 0;
+    target.style.paddingTop = 0;
+    target.style.paddingBottom = 0;
+    target.style.marginTop = 0;
+    target.style.marginBottom = 0;
+    target.offsetHeight;
+    target.style.boxSizing = 'border-box';
+    target.style.transitionProperty = "height, margin, padding";
+    target.style.transitionDuration = duration + 'ms';
+    target.style.height = height + 'px';
+    target.style.removeProperty('padding-top');
+    target.style.removeProperty('padding-bottom');
+    target.style.removeProperty('margin-top');
+    target.style.removeProperty('margin-bottom');
+    window.setTimeout( () => {
+      target.style.removeProperty('height');
+      target.style.removeProperty('overflow');
+      target.style.removeProperty('transition-duration');
+      target.style.removeProperty('transition-property');
+    }, duration);
+  }
+   let slideToggle = (target, duration = 500) => {
+    if (window.getComputedStyle(target).display === 'none') {
+      return slideDown(target, duration);
+    } else {
+      return slideUp(target, duration);
+    }
+  }
+   
+// ====  
+  
+// let speedAnimation = 400;
+// let targetId = document.getElementById("historicSong");
+
+// let slideBtnClick = (id, sl) => document.getElementById(id).addEventListener('click', () => sl(targetId, speedAnimation));
+
+// slideBtnClick('triggerUp', slideUp);
+// slideBtnClick('triggerDown', slideDown);
+// slideBtnClick('triggerToggle', slideToggle);
+
+
+// =========== old
+
+//   document.getElementById("triggerUp").addEventListener('click', function() {
+//   slideUp(document.getElementById("target"), 400);
+// });
+//   document.getElementById("triggerDown").addEventListener('click', function() {
+//   slideDown(document.getElementById("target"), 400);
+// });
+//   document.getElementById("triggerToggle").addEventListener('click', function() {
+//   slideToggle(document.getElementById("target"), 400);
+// });
