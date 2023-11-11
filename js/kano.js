@@ -10,7 +10,7 @@ const URL_STREAMING = 'https://stream.zeno.fm/n4gzbe9ufzzuv';
 const MEDIACP_JSON_URL = 'https://api.streamafrica.net/zeno/index.php?z=n4gzbe9ufzzuv'
 
 //API URL / if you use MEDIA CP, CHANGE THIS TO : https://api.streamafrica.net/metadata/mediacp.php?url='+MEDIACP_JSON_URL
-//const API_URL = 'https://api.streamafrica.net/metadata/index.php?z='+URL_STREAMING
+const API_URL = 'https://api.streamafrica.net/metadata/index.php?z='+URL_STREAMING
 
 // Visit https://api.vagalume.com.br/docs/ to get your API key
 const API_KEY = "18fe07917957c289983464588aabddfb";
