@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en-US">
 
 <head>
     <meta charset="utf-8">
@@ -7,19 +7,32 @@
     <meta name="description" content="Live Streaming mbah nunung Online Player for AAC+ streaming">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#171717">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <meta property="og:url" content="https://mbahnunungonline.net/live">
     <meta property="og:title" content="I'm listening mbah nunung Online">
     <meta property="og:site_name" content="mbah nunung Online">
     <meta property="og:description" content="mbah nunung Online, Radio Bintang Tenggara Banyuwangi, Radio Banyuwangi">
-    <meta property="og:image" content="img/bg-capa.jpg">
+    <meta property="og:image" content="https://live.staticflickr.com/65535/53358993030_4e3d4b5ed1.jpg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="512">
     <meta property="og:image:height" content="512">
+    <meta name="twitter:image" content="https://images.zeno.fm/OXaEPUd99817XKPidSxhgmIeEX6xRDzLAcbRlIsKHiQ/rs:fit:500:500/g:ce:0:0/aHR0cHM6Ly9zdHJlYW0tdG9vbHMuemVub21lZGlhLmNvbS9jb250ZW50L3N0YXRpb25zL2FneHpmbnBsYm04dGMzUmhkSE55TWdzU0NrRjFkR2hEYkdsbGJuUVlnSUNRcXN2LTRnc01DeElPVTNSaGRHbHZibEJ5YjJacGJHVVlnSUNReW9LM3JRa01vZ0VFZW1WdWJ3L2ltYWdlLz91cGRhdGVkPTE3MDAzNzI3NDIwMDA.webp"/>
+    <meta name="twitter:image:alt" content="Listen to mbah nunung Online"/>
+    <meta name="twitter:player" content="https://zeno.fm/player.php/player.php?stream=https://stream.zeno.fm/n4gzbe9ufzzuv"/>
+    <meta name="twitter:player:stream" content="https://stream.zeno.fm/n4gzbe9ufzzuv"/>
+    <meta name="twitter:player:stream:content_type" content="audio/aacp"/>
+    <meta name="twitter:player:width" content="480"/>
+    <meta name="twitter:player:height" content="50"/>
+    <meta property="og:site_name" content="mbahnunungonline.net"/>
     <meta name="google-site-verification" content="C-y3Rm4dkzaiScMSfPMQI4bU35i-t-N6VwHibjLzr6U" />
-    <link rel="icon" type="image/png" href="img/logo.png" />
+    <link rel="preconnect" href="https://google.com/"/>
+    <link rel="dns-prefetch" href="https://google.com/"/>
+    <link rel="icon" type="image/png" href="https://mbahnunungonline.net/img/28115974.png" />
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
-    <link rel="stylesheet" href="css/style.css?v2322">
+    <link rel="stylesheet" href="css/style.css?v270000">
 </head>
 
 <body>
@@ -28,7 +41,7 @@
         <div class="bg-mask"></div>
     </div>
     <main>
-        <section id="player">
+         <section id="player">
             <div class="container">
                 <div class="row web-player">
                     <div class="col-12 col-lg-10">
@@ -43,9 +56,9 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="info-current-song">
-                                            <h2 id="currentSong" class="current-song text-uppercase">...</h2>
-                                            <h3 id="currentArtist" class="current-artist text-captalize">...</h3>
-                                        </div>
+                                            <h3 id="currentArtist" class="current-artist text-captalize">No Artist</h3>
+                                            <h2 id="currentSong" class="current-song text-uppercase">No Title</h2>
+                                          </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="row">
@@ -72,20 +85,20 @@
                 </div>
                 <div class="row historic">
                     <div class="col-12">
-                        <h2>Recently Played</h2>
+                        <h2>wesmari diputer</h2>
                         <div class="row" id="historicSong">
                             <article class="col-12 col-md-6">
                                 <div class="cover-historic"></div>
                                 <div class="music-info">
-                                    <div class="song">...</div>
-                                    <div class="artist">...</div>
+                                    <div class="artist">No Artist</div>
+                                    <div class="song">No Title</div>
                                 </div>
                             </article>
                             <article class="col-12 col-md-6">
                                 <div class="cover-historic"></div>
                                 <div class="music-info">
-                                    <div class="song">...</div>
-                                    <div class="artist">...</div>
+                                    <div class="artist">No Artist</div>
+                                    <div class="song">No Title</div>
                                 </div>
                             </article>
                         </div>
@@ -93,19 +106,17 @@
                 </div>
             </div>
         </section>
-    </main>
+     </main>
     <div class="modal fade" id="modalLyrics" tabindex="-1" role="dialog" aria-labelledby="lyricsSong" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="lyricsSong">Lyric</h5>
+                    <h5 class="modal-title" id="lyricsSong">Lyrics</h5>
                     <button type="button" style="color: #fff" class="close" data-dismiss="modal" aria-label="Fechar">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="vagalume text-center"><a href="https://www.vagalume.com.br/" target="_blank" rel="noopener"><img
-                            src="img/103-fundo-escuro.jpg" class="" /></a><br />Powered by <a href="https://www.vagalume.com.br/"
-                        target="_blank" rel="noopener">Vagalume</a></div>
+                
                 <div class="modal-body" id="lyric"></div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
