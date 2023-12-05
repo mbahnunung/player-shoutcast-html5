@@ -12,7 +12,7 @@ var settings = {
     'radio_name': 'Bintang Tenggara',
 
     // URL of streaming without / on the final, eg: http://streaming.com:8080
-    'url_streaming': 'https://azuracast.suzananet.com/radio/8100',
+    'url_streaming': 'https://azuracast.suzananet.com/radio/8010',
 
     // When choosing icecast, make sure the file 'player.log' in the document root is writeable.
     // Choose between 'shoutcast' or 'icecast'
