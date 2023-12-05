@@ -17,7 +17,7 @@ body {
     min-width: 100%;
     min-height: 100%;
     position: fixed;
-    background: url('../img/background.jpg') no-repeat;
+    background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsVzTxdaQyh2T9d22WexwdPRBobE_0bvN3xkuylVGorUpKJRlNy_RTgvP2qDk0xfLFhSHoqbZ5ilzkA2dThUf8PUig2M73ihhRTDWEoKvN5VLjgTE4qptAeP9RojvadMwJra_-j4I-DQnOYywgYwmuGVMuE5rjUNKV4_QkzvdXfqdzl1tvY7Gqi3JD362b/s1600/background.jpg') no-repeat;
     background-position: center;
     background-size: cover;
     transition: background-image 1s;
@@ -57,22 +57,23 @@ body {
 .cover-album {
     max-width: 80%;
     margin: auto;
-    background: url('../img/bg-capa.jpg') no-repeat;
+    background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjWeI_jc8OFPc3AAMh32jSMjX0WCCjfSN_LVG3_-e6LyMLy5b0HvHX2LoWWeX2X_9O2w-Ay5eflh0mBhSJITekyEBRgtJQDoLf5RpBAOC4P37NNVAdYTgYNSK5A8dAZgyVpsRAeyJai9xCNsuuXZz4-EFMWY3HaJs91H1XAX85XpVGODGTJ_8XYIM1c4ChL/s1600/nocoverart.jpg') no-repeat;
     background-size: cover;
-    border: 1px solid #383838;
+    border: 1px solid #fefefe;
     box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.4);
     transition: background-image 1s;
+    border-radius: 20px;
     margin-bottom: 15px;
 }
 
 .watermark {
     width: 89px;
-    height: 35px;
-    background: url(../img/logo.png) no-repeat;
-    background-size: auto 35px;
+    height: 55px;
+    background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiYW3wSfNsEAaFZ9wJZM_FJi0Ixp96vfG_pH33OdkS63Siw0nBtg3MjYlm13yJCFoWF0yTIQpp8eUEoP1z-klWS0xg8dsPBui7HAbTMnRZeOv8LK8t0vTahWecenLQ7Xh_rUZe6Os0l7NuAdUyDDXH9H5tpf40gG8cKQSMT5NO8kRDBSF-HzVNLLPsgAmDD/s1600/nPBu2lK.png) no-repeat;
+    background-size: auto 55px;
     opacity: 0.5;
     position: relative;
-    bottom: 36px;
+    bottom: 56px;
     right: -1px;
     z-index: 5;
 }
@@ -83,6 +84,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border-radius: 20px;
     transition: background-image 1s;
 }
 
@@ -266,9 +268,10 @@ input[type=range]::-ms-thumb {
     height: 95px;
     margin-right: 15px;
     float: left;
-    background: url('../img/bg-capa.jpg') no-repeat;
+    border-radius: 20px;
+    background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjWeI_jc8OFPc3AAMh32jSMjX0WCCjfSN_LVG3_-e6LyMLy5b0HvHX2LoWWeX2X_9O2w-Ay5eflh0mBhSJITekyEBRgtJQDoLf5RpBAOC4P37NNVAdYTgYNSK5A8dAZgyVpsRAeyJai9xCNsuuXZz4-EFMWY3HaJs91H1XAX85XpVGODGTJ_8XYIM1c4ChL/s1600/nocoverart.jpg') no-repeat;
     background-size: cover;
-    border: 1px solid #383838;
+    border: 2px solid #fefefe;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
     transition: background-image 1s;
 }
@@ -284,6 +287,7 @@ input[type=range]::-ms-thumb {
     font-size: 20px;
     text-transform: uppercase;
     margin-bottom: -5px;
+    color: white;
 }
 
 @media(max-width: 370px) {
