@@ -16,7 +16,7 @@ copies or substantial portions of the Software.
 */
 
 // SELECT ARTWORK PROVIDER, iTunes, Deezer & spotify or AzuraCast. eg : spotify 
-var API_SERVICE = 'iTunes';
+//var API_SERVICE = 'iTunes';
 
 window.onload = function () {
     var page = new Page;
