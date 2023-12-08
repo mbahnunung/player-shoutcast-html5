@@ -1,19 +1,21 @@
-const RADIO_NAME = 'mbah nunung Online';
+mbah nunung Online
 
-// SELECT ARTWORK PROVIDER, ITUNES, DEEZER & SPOTIFY or AZURACAST. eg : spotify 
-var API_SERVICE = 'spotify';
+https://mbahnunungonline.net/live
 
-// Change Stream URL Here, Supports, ICECAST, ZENO, SHOUTCAST, RADIOJAR and any other stream service.
-const URL_STREAMING = 'https://stream.zeno.fm/n4gzbe9ufzzuv';
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
 
-//PASTE YOUR MEDIA CP JSON URL HERE TO GET NOW PLAYING SONG TITLE.
-const MEDIACP_JSON_URL = 'https://api.streamafrica.net/zeno/index.php?z=n4gzbe9ufzzuv'
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-//API URL / if you use MEDIA CP, CHANGE THIS TO : https://api.streamafrica.net/metadata/mediacp.php?url='+MEDIACP_JSON_URL
-const API_URL = 'https://api.streamafrica.net/metadata/index.php?z='+URL_STREAMING
+*/
 
-// Visit https://api.vagalume.com.br/docs/ to get your API key
-const API_KEY = "18fe07917957c289983464588aabddfb";
+
+var zenoid = 'n4gzbe9ufzzuv'
 
 window.onload = function () {
     var page = new Page;
@@ -27,7 +29,7 @@ window.onload = function () {
     // Interval to get streaming data in miliseconds
     setInterval(function () {
         getStreamingData();
-    }, 10000);
+    }, 4000);
 
     var coverArt = document.getElementsByClassName('cover-album')[0];
 
@@ -69,17 +71,16 @@ function Page() {
         var $artistName = document.querySelectorAll('#historicSong article .music-info .artist');
 
         // Default cover art
-        var urlCoverArt = 'images/cover.png';
+        var urlCoverArt = DEFAULT_COVER_ART;
 
         // Get cover art for song history
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             if (this.readyState === 4 && this.status === 200) {
                 var data = JSON.parse(this.responseText);
-                var artworking = data.results;
-                var gotit = artworking.artwork;
+                var artworkUrl100 = (data.resultCount) ? data.results[0].artworkUrl100 : urlCoverArt;
 
-                document.querySelectorAll('#historicSong article .cover-historic')[n].style.backgroundImage = 'url(' + gotit + ')';
+                document.querySelectorAll('#historicSong article .cover-historic')[n].style.backgroundImage = 'url(' + artworkUrl100 + ')';
             }
             // Formating characters to UTF-8
             var music = info.song.replace(/&apos;/g, '\'');
@@ -95,7 +96,7 @@ function Page() {
             $historicDiv[n].classList.add('animated');
             $historicDiv[n].classList.add('slideInRight');
         }
-        xhttp.open('GET', 'https://api.streamafrica.net/new.search.php?query=' + info.artist + ' ' + info.song + '&service=' + API_SERVICE.toLowerCase());
+        xhttp.open('GET', 'https://itunes.apple.com/search?term=' + info.artist + ' ' + info.song + '&media=music&limit=1', true);
         xhttp.send();
 
         setTimeout(function () {
@@ -108,7 +109,7 @@ function Page() {
 
     this.refreshCover = function (song = '', artist) {
         // Default cover art
-        var urlCoverArt = 'images/cover.png';
+        var urlCoverArt = DEFAULT_COVER_ART;
 
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
@@ -118,13 +119,15 @@ function Page() {
             // Get cover art URL on iTunes API
             if (this.readyState === 4 && this.status === 200) {
                 var data = JSON.parse(this.responseText);
-                var artworkUrl100 = data.results;
-                var urlCoverArt = artworkUrl100.artwork;
-                var urlCoverArt2 = artworkUrl100.artwork_cdn;
-                
-                if (urlCoverArt == null){
-                    return urlCoverArt2;
-                }
+                var artworkUrl100 = (data.resultCount) ? data.results[0].artworkUrl100 : urlCoverArt;
+
+                // If it returns any data, changes the image resolution or sets the default
+                 urlCoverArt = (artworkUrl100 != urlCoverArt) ? artworkUrl100.replace('100x100bb', '1200x1200bb') : urlCoverArt;
+                var urlCoverArt96 = (artworkUrl100 != urlCoverArt) ? urlCoverArt.replace('1200x1200bb', '96x96bb') : urlCoverArt;
+                var urlCoverArt128 = (artworkUrl100 != urlCoverArt) ? urlCoverArt.replace('1200x1200bb', '128x128bb') : urlCoverArt;
+                var urlCoverArt192 = (artworkUrl100 != urlCoverArt) ? urlCoverArt.replace('1200x1200bb', '192x192bb') : urlCoverArt;
+                var urlCoverArt256 = (artworkUrl100 != urlCoverArt) ? urlCoverArt.replace('1200x1200bb', '256x256bb') : urlCoverArt;
+                var urlCoverArt384 = (artworkUrl100 != urlCoverArt) ? urlCoverArt.replace('1200x1200bb', '384x384bb') : urlCoverArt;
 
                 coverArt.style.backgroundImage = 'url(' + urlCoverArt + ')';
                 coverArt.className = 'animated bounceInLeft';
@@ -140,27 +143,27 @@ function Page() {
                         title: song,
                         artist: artist,
                         artwork: [{
-                                src: urlCoverArt,
+                                src: urlCoverArt96,
                                 sizes: '96x96',
                                 type: 'image/png'
                             },
                             {
-                                src: urlCoverArt,
+                                src: urlCoverArt128,
                                 sizes: '128x128',
                                 type: 'image/png'
                             },
                             {
-                                src: urlCoverArt,
+                                src: urlCoverArt192,
                                 sizes: '192x192',
                                 type: 'image/png'
                             },
                             {
-                                src: urlCoverArt,
+                                src: urlCoverArt256,
                                 sizes: '256x256',
                                 type: 'image/png'
                             },
                             {
-                                src: urlCoverArt,
+                                src: urlCoverArt384,
                                 sizes: '384x384',
                                 type: 'image/png'
                             },
@@ -174,7 +177,7 @@ function Page() {
                 }
             }
         }
-        xhttp.open('GET', 'https://api.streamafrica.net/new.search.php?query=' + artist + ' ' + song + '&service=' + API_SERVICE.toLowerCase());
+        xhttp.open('GET', 'https://itunes.apple.com/search?term=' + artist + ' ' + song + '&media=music&limit=1', true);
         xhttp.send();
     }
 
@@ -189,10 +192,8 @@ function Page() {
     this.setVolume = function () {
         if (typeof (Storage) !== 'undefined') {
             var volumeLocalStorage = (!localStorage.getItem('volume')) ? 80 : localStorage.getItem('volume');
-			setTimeout(function(){
-				document.getElementById('volume').value = volumeLocalStorage;
-            	document.getElementById('volIndicator').innerHTML = volumeLocalStorage;
-			}, 3000);
+            document.getElementById('volume').value = volumeLocalStorage;
+            document.getElementById('volIndicator').innerHTML = volumeLocalStorage;
         }
     }
 
@@ -233,8 +234,8 @@ var audio = new Audio(URL_STREAMING);
 
 // Player control
 function Player() {
-    this.play = function () {
-        audio.play();
+    this.play = async function () {
+        await audio.play();
 
         var defaultVolume = document.getElementById('volume').value;
 
@@ -258,65 +259,42 @@ function Player() {
 // On play, change the button to pause
 audio.onplay = function () {
     var botao = document.getElementById('playerButton');
-    var bplay = document.getElementById('buttonPlay');
+
     if (botao.className === 'fa fa-play') {
         botao.className = 'fa fa-pause';
-        bplay.firstChild.data = 'PAUSE';
     }
 }
 
 // On pause, change the button to play
 audio.onpause = function () {
     var botao = document.getElementById('playerButton');
-    var bplay = document.getElementById('buttonPlay');
+
     if (botao.className === 'fa fa-pause') {
         botao.className = 'fa fa-play';
-        bplay.firstChild.data = 'PLAY';
     }
 }
 
 // Unmute when volume changed
-// audio.onvolumechange = function () {
-//     if (audio.volume > 0) {
-//         audio.muted = false;
-//     }
-// }
-// Unmute when volume changed
 audio.onvolumechange = function () {
     if (audio.volume > 0) {
-        audio.muted = false;        
-        var botmute = document.getElementById('playerMute');
-        if (botmute.className === 'fa fa-volume-off') {
-            botmute.className = 'fa fa-volume-up';
-        }
-    }else{
-        var botmute = document.getElementById('playerMute');
-        if (botmute.className === 'fa fa-volume-up') {
-            botmute.className = 'fa fa-volume-off';
-        }
+        audio.muted = false;
     }
 }
 
 audio.onerror = function () {
-    var confirmacao = confirm('Stream Down / Network Error. \nClick OK to try again.');
+    var confirmacao = confirm('Error on communicate to server. \nClick OK to try again.');
 
     if (confirmacao) {
         window.location.reload();
     }
 }
 
-setTimeout(function(){
-    document.getElementById('volume').oninput = function () {
-        audio.volume = intToDecimal(this.value);    
-        var page = new Page();
-        page.changeVolumeIndicator(this.value);
-    }
-    document.getElementById("triggerToggle").addEventListener('click', function() {
-        slideToggle(document.getElementById("historicSong"), 400);
-    });
+document.getElementById('volume').oninput = function () {
+    audio.volume = intToDecimal(this.value);
 
-}, 3000);
-
+    var page = new Page();
+    page.changeVolumeIndicator(this.value);
+}
 
 function togglePlay() {
     if (!audio.paused) {
@@ -346,28 +324,17 @@ function volumeDown() {
 }
 
 function mute() {
-    // togglePlay()
     if (!audio.muted) {
         document.getElementById('volIndicator').innerHTML = 0;
         document.getElementById('volume').value = 0;
         audio.volume = 0;
         audio.muted = true;
-
-        var botmute = document.getElementById('playerMute');
-        if (botmute.className === 'fa fa-volume-up') {
-            botmute.className = 'fa fa-volume-off';
-        }
     } else {
-        // var localVolume = localStorage.getItem('volume');
-        document.getElementById('volIndicator').innerHTML = 50;
-        document.getElementById('volume').value = 50;
-        audio.volume = intToDecimal(50);
+        var localVolume = localStorage.getItem('volume');
+        document.getElementById('volIndicator').innerHTML = localVolume;
+        document.getElementById('volume').value = localVolume;
+        audio.volume = intToDecimal(localVolume);
         audio.muted = false;
-
-        var botmute = document.getElementById('playerMute');
-        if (botmute.className === 'fa fa-volume-off') {
-            botmute.className = 'fa fa-volume-up';
-        }
     }
 }
 
@@ -385,22 +352,26 @@ function getStreamingData() {
 
             var page = new Page();
 
+            var currentSongElement = document.getElementById('currentSong').innerHTML.replace(/&apos;/g, '\'');
+            let currentSongEl = currentSongElement.replace(/&amp;/g, '&');
+
             // Formating characters to UTF-8
             let song = data.currentSong.replace(/&apos;/g, '\'');
-            currentSong = song.replace(/&amp;/g, '&');
+            let currentSong = song.replace(/&amp;/g, '&');
 
             let artist = data.currentArtist.replace(/&apos;/g, '\'');
-            currentArtist = artist.replace(/&amp;/g, '&');
-
+            let currentArtist = artist.replace(/&amp;/g, '&');
+            currentArtist = currentArtist.replace('  ', ' '); 
+            
             // Change the title
             document.title = currentSong + ' - ' + currentArtist + ' | ' + RADIO_NAME;
 
-            if (document.getElementById('currentSong').innerHTML !== song) {
+            if (currentSongEl.trim() !== currentSong.trim()) {
                 page.refreshCover(currentSong, currentArtist);
                 page.refreshCurrentSong(currentSong, currentArtist);
-                // page.refreshLyric(currentSong, currentArtist);
+                page.refreshLyric(currentSong, currentArtist);
 
-                for (var i = 0; i < 4; i++) {
+                for (var i = 0; i < 2; i++) {
                     page.refreshHistoric(data.songHistory[i], i);
                 }
             }
@@ -410,7 +381,7 @@ function getStreamingData() {
     var d = new Date();
 
     // Requisition with timestamp to prevent cache on mobile devices
-    xhttp.open('GET', API_URL);
+    xhttp.open('GET', 'https://api.streamafrica.net/zeno/index.php?z='+zenoid);
     xhttp.send();
 }
 
@@ -578,93 +549,3 @@ function intToDecimal(vol) {
 function decimalToInt(vol) {
     return vol * 100;
 }
-
-/* show / hide historic songs */
-let slideUp = (target, duration=500) => {
-    target.style.transitionProperty = 'height, margin, padding';
-    target.style.transitionDuration = duration + 'ms';
-    target.style.boxSizing = 'border-box';
-    target.style.height = target.offsetHeight + 'px';
-    target.offsetHeight;
-    target.style.overflow = 'hidden';
-    target.style.height = 0;
-    target.style.paddingTop = 0;
-    target.style.paddingBottom = 0;
-    target.style.marginTop = 0;
-    target.style.marginBottom = 0;
-    window.setTimeout( () => {
-      target.style.display = 'none';
-      target.style.removeProperty('height');
-      target.style.removeProperty('padding-top');
-      target.style.removeProperty('padding-bottom');
-      target.style.removeProperty('margin-top');
-      target.style.removeProperty('margin-bottom');
-      target.style.removeProperty('overflow');
-      target.style.removeProperty('transition-duration');
-      target.style.removeProperty('transition-property');
-      //alert("!");
-    }, duration);
-  }
-
-  let slideDown = (target, duration=500) => {
-    target.style.removeProperty('display');
-    let display = window.getComputedStyle(target).display;
-
-    if (display === 'none')
-      display = 'block';
-
-    target.style.display = display;
-    let height = target.offsetHeight;
-    target.style.overflow = 'hidden';
-    target.style.height = 0;
-    target.style.paddingTop = 0;
-    target.style.paddingBottom = 0;
-    target.style.marginTop = 0;
-    target.style.marginBottom = 0;
-    target.offsetHeight;
-    target.style.boxSizing = 'border-box';
-    target.style.transitionProperty = "height, margin, padding";
-    target.style.transitionDuration = duration + 'ms';
-    target.style.height = height + 'px';
-    target.style.removeProperty('padding-top');
-    target.style.removeProperty('padding-bottom');
-    target.style.removeProperty('margin-top');
-    target.style.removeProperty('margin-bottom');
-    window.setTimeout( () => {
-      target.style.removeProperty('height');
-      target.style.removeProperty('overflow');
-      target.style.removeProperty('transition-duration');
-      target.style.removeProperty('transition-property');
-    }, duration);
-  }
-   let slideToggle = (target, duration = 500) => {
-    if (window.getComputedStyle(target).display === 'none') {
-      return slideDown(target, duration);
-    } else {
-      return slideUp(target, duration);
-    }
-  }
-   
-// ====  
-  
-// let speedAnimation = 400;
-// let targetId = document.getElementById("historicSong");
-
-// let slideBtnClick = (id, sl) => document.getElementById(id).addEventListener('click', () => sl(targetId, speedAnimation));
-
-// slideBtnClick('triggerUp', slideUp);
-// slideBtnClick('triggerDown', slideDown);
-// slideBtnClick('triggerToggle', slideToggle);
-
-
-// =========== old
-
-//   document.getElementById("triggerUp").addEventListener('click', function() {
-//   slideUp(document.getElementById("target"), 400);
-// });
-//   document.getElementById("triggerDown").addEventListener('click', function() {
-//   slideDown(document.getElementById("target"), 400);
-// });
-//   document.getElementById("triggerToggle").addEventListener('click', function() {
-//   slideToggle(document.getElementById("target"), 400);
-// });
