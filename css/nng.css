@@ -303,8 +303,8 @@ input[type=range]::-ms-thumb {
     }
     .cover-album {
         margin: 10px auto;
-        min-width: 320px;
-        height: 320px;
+        min-width: 200px;
+        height: 200px;
     }
     .logo img {
         max-width: 300px;
