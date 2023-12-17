@@ -2,6 +2,17 @@
 @import url('https://fonts.googleapis.com/css?family=Share:400i,700i');
 @import url('bootstrap.min.css');
 
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
 /* BLUR BACKGROUND */
 
 #player .watermark {
