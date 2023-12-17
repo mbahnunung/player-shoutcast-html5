@@ -5,21 +5,27 @@
 
 /* BLUR BACKGROUND */
 
-
-
+#player .watermark {
+    position: absolute;
+    top: 20px;
+    right: 65px;
+}
+#player .watermark img {
+    max-height: 30px;
+    width: auto;
+}
 #bgCover {
     height: 100%;
     width: 100%;
-    position: absolute;
+    position: absolute; 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 20%;
     filter: blur(10px);
     -webkit-filter: blur(10px);
-    transition: all .5s linear;
-    transform: scale(2.2);
-  
-    z-index: 1;
+    /* transition: all .5s linear;
+    transform: scale(2.2); */
+    /* z-index: 1; */
 }
 #bgCover::before {    
     content: "";
