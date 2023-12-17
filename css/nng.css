@@ -17,29 +17,16 @@
 #bgCover {
     height: 100%;
     width: 100%;
-    position: absolute; 
+    position: absolute;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 20%;
     filter: blur(10px);
     -webkit-filter: blur(10px);
-    /* transition: all .5s linear;
-    transform: scale(2.2); */
-    /* z-index: 1; */
-}
-#bgCover::before {    
-    content: "";
-    background-image: url('../images/bg_site.jpg');
-    background-size: cover;
-/*     position: absolute; */
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.85;
-    filter: blur(10px);
-    -webkit-filter: blur(10px);
     transition: all .5s linear;
+    transform: scale(2.2);
+  
+    z-index: 1;
 }
 .bg-mask {
     min-width: 100%;
