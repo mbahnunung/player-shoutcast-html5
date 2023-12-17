@@ -5,17 +5,7 @@
 
 /* BLUR BACKGROUND */
 
-.cover-site {
-    min-width: 100%;
-    min-height: 100%;
-    position: fixed;
-    background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsVzTxdaQyh2T9d22WexwdPRBobE_0bvN3xkuylVGorUpKJRlNy_RTgvP2qDk0xfLFhSHoqbZ5ilzkA2dThUf8PUig2M73ihhRTDWEoKvN5VLjgTE4qptAeP9RojvadMwJra_-j4I-DQnOYywgYwmuGVMuE5rjUNKV4_QkzvdXfqdzl1tvY7Gqi3JD362b/s1600/background.jpg') no-repeat;
-    background-position: center;
-    background-size: cover;
-    transition: background-image 1s;
-    background-position: center;
-    background-attachment: fixed;
-}
+
 
 #bgCover {
     height: 100%;
