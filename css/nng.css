@@ -40,7 +40,7 @@
     -webkit-filter: blur(10px);
     transition: all .5s linear;
 }
-#player {
+.bg-mask {
     min-width: 100%;
     min-height: 100%;
     position: relative;
