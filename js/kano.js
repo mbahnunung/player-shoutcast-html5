@@ -21,7 +21,10 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
+// SELECT ARTWORK PROVIDER, iTunes, Deezer & spotify  eg : spotify 
+var API_SERVICE = 'spotify';
 
+//ZENO ID
 var zenoid = 'n4gzbe9ufzzuv'
 
 window.onload = function () {
@@ -241,8 +244,8 @@ var audio = new Audio(URL_STREAMING);
 
 // Player control
 function Player() {
-    this.play = async function () {
-        await audio.play();
+    this.play = function () {
+        audio.play();
 
         var defaultVolume = document.getElementById('volume').value;
 
@@ -266,18 +269,20 @@ function Player() {
 // On play, change the button to pause
 audio.onplay = function () {
     var botao = document.getElementById('playerButton');
-
+    var bplay = document.getElementById('buttonPlay');
     if (botao.className === 'fa fa-play') {
         botao.className = 'fa fa-pause';
+        bplay.firstChild.data = 'PAUSE';
     }
 }
 
 // On pause, change the button to play
 audio.onpause = function () {
     var botao = document.getElementById('playerButton');
-
+    var bplay = document.getElementById('buttonPlay');
     if (botao.className === 'fa fa-pause') {
         botao.className = 'fa fa-play';
+        bplay.firstChild.data = 'PLAY';
     }
 }
 
@@ -289,7 +294,7 @@ audio.onvolumechange = function () {
 }
 
 audio.onerror = function () {
-    var confirmacao = confirm('Error on communicate to server. \nClick OK to try again.');
+    var confirmacao = confirm('Stream Down / Network Error. \nClick OK to try again.');
 
     if (confirmacao) {
         window.location.reload();
@@ -359,21 +364,17 @@ function getStreamingData() {
 
             var page = new Page();
 
-            var currentSongElement = document.getElementById('currentSong').innerHTML.replace(/&apos;/g, '\'');
-            let currentSongEl = currentSongElement.replace(/&amp;/g, '&');
-
             // Formating characters to UTF-8
             let song = data.currentSong.replace(/&apos;/g, '\'');
-            let currentSong = song.replace(/&amp;/g, '&');
+            currentSong = song.replace(/&amp;/g, '&');
 
             let artist = data.currentArtist.replace(/&apos;/g, '\'');
-            let currentArtist = artist.replace(/&amp;/g, '&');
-            currentArtist = currentArtist.replace('  ', ' '); 
-            
-            // Change the title
-            document.title = currentSong + ' - ' + currentArtist + ' | ' + RADIO_NAME;
+            currentArtist = artist.replace(/&amp;/g, '&');
 
-            if (currentSongEl.trim() !== currentSong.trim()) {
+            // Change the title
+            document.title = currentArtist + ' - ' + currentSong + ' | ' + RADIO_NAME;
+
+            if (document.getElementById('currentSong').innerHTML !== song) {
                 page.refreshCover(currentSong, currentArtist);
                 page.refreshCurrentSong(currentSong, currentArtist);
                 page.refreshLyric(currentSong, currentArtist);
