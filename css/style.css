@@ -112,7 +112,8 @@ body {
 }
 
 .play-pause i {
-    cursor: pointer;
+    cursor: pointer; 
+    color: rgb(255, 0, 0)!important;
 }
 
 .volume-icon {
