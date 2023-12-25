@@ -1,7 +1,7 @@
 /*
-mbah nunung Online
+The MIT License (MIT)
 
-https://mbahnunungonline.net/live
+Github: https://github.com/gsavio
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -13,8 +13,18 @@ subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
+// SELECT ARTWORK PROVIDER, iTunes, Deezer & spotify  eg : spotify 
+var API_SERVICE = 'spotify';
+
+//ZENO ID
 var zenoid = 'n4gzbe9ufzzuv'
 
 window.onload = function () {
@@ -29,7 +39,7 @@ window.onload = function () {
     // Interval to get streaming data in miliseconds
     setInterval(function () {
         getStreamingData();
-    }, 6000);
+    }, 4000);
 
     var coverArt = document.getElementsByClassName('cover-album')[0];
 
@@ -121,7 +131,7 @@ function Page() {
                 var data = JSON.parse(this.responseText);
                 var artworkUrl100 = (data.resultCount) ? data.results[0].artworkUrl100 : urlCoverArt;
 
-                // Se retornar algum dado, alterar a resoluÃ§Ã£o da imagem ou definir a padrÃ£o
+                // If it returns any data, changes the image resolution or sets the default
                 urlCoverArt = (artworkUrl100 != urlCoverArt) ? artworkUrl100.replace('100x100bb', '1200x1200bb') : urlCoverArt;
                 var urlCoverArt96 = (artworkUrl100 != urlCoverArt) ? urlCoverArt.replace('1200x1200bb', '96x96bb') : urlCoverArt;
                 var urlCoverArt128 = (artworkUrl100 != urlCoverArt) ? urlCoverArt.replace('1200x1200bb', '128x128bb') : urlCoverArt;
@@ -230,7 +240,6 @@ function Page() {
     }
 }
 
-//var audio = new Audio(URL_STREAMING + '/;');
 var audio = new Audio(URL_STREAMING);
 
 // Player control
@@ -260,18 +269,20 @@ function Player() {
 // On play, change the button to pause
 audio.onplay = function () {
     var botao = document.getElementById('playerButton');
-
+    var bplay = document.getElementById('buttonPlay');
     if (botao.className === 'fa fa-play') {
         botao.className = 'fa fa-pause';
+        bplay.firstChild.data = 'PAUSE';
     }
 }
 
 // On pause, change the button to play
 audio.onpause = function () {
     var botao = document.getElementById('playerButton');
-
+    var bplay = document.getElementById('buttonPlay');
     if (botao.className === 'fa fa-pause') {
         botao.className = 'fa fa-play';
+        bplay.firstChild.data = 'PLAY';
     }
 }
 
@@ -283,7 +294,7 @@ audio.onvolumechange = function () {
 }
 
 audio.onerror = function () {
-    var confirmacao = confirm('Error on communicate to server. \nClick OK to try again.');
+    var confirmacao = confirm('Stream Down / Network Error. \nClick OK to try again.');
 
     if (confirmacao) {
         window.location.reload();
@@ -353,8 +364,6 @@ function getStreamingData() {
 
             var page = new Page();
 
-            var currentSongElement = document.getElementById('currentSong');
-
             // Formating characters to UTF-8
             let song = data.currentSong.replace(/&apos;/g, '\'');
             currentSong = song.replace(/&amp;/g, '&');
@@ -365,7 +374,7 @@ function getStreamingData() {
             // Change the title
             document.title = currentArtist + ' - ' + currentSong + ' | ' + RADIO_NAME;
 
-            if (currentSongElement.innerText !== song.trim()) {
+            if (document.getElementById('currentSong').innerHTML !== song) {
                 page.refreshCover(currentSong, currentArtist);
                 page.refreshCurrentSong(currentSong, currentArtist);
                 page.refreshLyric(currentSong, currentArtist);
