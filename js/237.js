@@ -605,8 +605,8 @@ function Page() {
          else if (artist == 'Bintang Tenggara'){
             var urlCoverArt = BintangTenggara;
         }
-        else if (artist == 'NEXT TIME'){
-            var urlCoverArt = NEXTTIME;
+        else if (artist == 'Furkan Sert'){
+            var urlCoverArt = FurkanSert;
         }
         else if (artist == 'VRCAK'){
             var urlCoverArt = VRCAK;
