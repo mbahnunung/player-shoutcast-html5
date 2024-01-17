@@ -107,7 +107,7 @@ function Page() {
         const DemyYoker = 'https://cdns.klimg.com/resized/670x/g/1/1/11_fakta_perjalanan_karir_demy_hardi_pedandut_hits_banyuwangi_tak_punya_niatan_jadi_penyanyi_-_terkesan_dengan_fans_anak-anak/p/demy-20211112-006-non_fotografer_kly.jpg';
         const AlviAnanta = 'https://joox-cms-image-1251316161.file.myqcloud.com/2021/09/28/8cbaa312-151c-4ba3-b28e-52c5be1c2766.jpg/500';
         const BintangTenggara = 'https://thumbs2.imgbox.com/b1/4a/3kNlaBwy_t.jpg';
-        const ALEKSANDARM = 'img/izveduvaci/ALEKSANDARM.jpg';
+        const FurkanSert  = 'https://i1.sndcdn.com/artworks-000498456858-0gn1c8-t500x500.jpg';
         const DZAFER = 'img/izveduvaci/DZAFER.jpg';
         const BOJS = 'img/izveduvaci/BOJS.jpg';
         const MIJ = 'img/izveduvaci/MIJ.jpg';
@@ -129,7 +129,7 @@ function Page() {
         const IGOR = 'img/izveduvaci/IGOR.jpg';
         const DANI = 'img/izveduvaci/DANI.jpg';
         const BTS = 'https://live.staticflickr.com/65535/53459011184_1df18fcc82_b.jpg';
-        const FurkanSert  = 'https://i1.sndcdn.com/artworks-000498456858-0gn1c8-t500x500.jpg';
+        const Furkan  = 'artworks-000498456858-0gn1c8-t500x500.jpg';
         const ELENAR = 'img/izveduvaci/ELENAR.jpg';
         const LAMBE = 'img/izveduvaci/LABME.jpg';
         const VLATKOL = 'img/izveduvaci/VLATKOL.jpg';
