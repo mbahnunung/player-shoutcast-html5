@@ -437,15 +437,14 @@ function Page() {
         var urlCoverArt = DEFAULT_COVER_ART;
 	    }
 
-        // Get cover art for song history
+         // Get cover art for song history
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             if (this.readyState === 4 && this.status === 200) {
                 var data = JSON.parse(this.responseText);
-                var artworking = data.results;
-                var gotit = artworking.artwork;
+                var artworkUrl100 = (data.resultCount) ? data.results[0].artworkUrl100 : urlCoverArt;
 
-                document.querySelectorAll('#historicSong article .cover-historic')[n].style.backgroundImage = 'url(' + gotit + ')';
+                document.querySelectorAll('#historicSong article .cover-historic')[n].style.backgroundImage = 'url(' + artworkUrl100 + ')';
             }
             // Formating characters to UTF-8
             var music = info.song.replace(/&apos;/g, '\'');
@@ -461,7 +460,7 @@ function Page() {
             $historicDiv[n].classList.add('animated');
             $historicDiv[n].classList.add('slideInRight');
         }
-        xhttp.open('GET', 'https://api.streamafrica.net/new.search.php?query=' + info.artist + ' ' + info.song + '&service=' + API_SERVICE.toLowerCase());
+        xhttp.open('GET', 'https://itunes.apple.com/search?term=' + encodeURIComponent(info.artist + ' ' + info.song.replace(/[.*]/g, '')) + '&media=music&limit=1', true);
         xhttp.send();
 
         setTimeout(function () {
@@ -471,7 +470,6 @@ function Page() {
             }
         }, 2000);
     }
-
      // Artist Covers - Below 
     this.refreshCover = function (song = '', artist) {
         const JINGLESETELAHIKLAN = "https://cdn.bintangtenggarafm.com/img/dbwvp4y.png";
