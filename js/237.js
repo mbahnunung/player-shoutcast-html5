@@ -790,7 +790,10 @@ function Page() {
         } 
         else if (artist =='Reny Farida'){
             var urlCoverArt = Reny;
-        }
+        } 
+	else if (artistRadio == 'Rozy Abdillah'){
+            var urlCoverArt = Rozy;
+        }	
         else if (artist == 'Alvi Ananta'){
             var urlCoverArt = AlviAnanta;
         }
