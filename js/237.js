@@ -109,7 +109,7 @@ function Page() {
         const BintangTenggara = 'https://thumbs2.imgbox.com/b1/4a/3kNlaBwy_t.jpg';
         const FurkanSert  = 'https://i1.sndcdn.com/artworks-000498456858-0gn1c8-t500x500.jpg';
         const Rozy = 'https://yt3.googleusercontent.com/k3FluG3Cks7LH-1dveRTySBs2p7dUgvdDbV_Cd5wE7njxyyiGBL9brJ7xGHaZ5GY6ocrVv-9dg=s900-c-k-c0x00ffffff-no-rj';
-        const BOJS = 'img/izveduvaci/BOJS.jpg';
+        const Reny = 'https://viberatecdn.blob.core.windows.net/entity/artist/reny-farida-sWRmh';
         const MIJ = 'img/izveduvaci/MIJ.jpg';
         const MAJAO = 'img/izveduvaci/MAJAO.jpg';
         const MAGIJA = 'img/izveduvaci/MAGIJA.jpg';
@@ -247,8 +247,8 @@ function Page() {
         else if (artistRadio == 'Rozy Abdillah'){
             var urlCoverArt = Rozy;
         }
-        else if (artistRadio == 'LAMBE ALABAKOVSKI'){
-            var urlCoverArt = LAMBE;
+        else if (artistRadio == 'Reny Farida'){
+            var urlCoverArt = Reny;
         }
         else if (artistRadio == 'LAMBE'){
             var urlCoverArt = LAMBE;
@@ -537,7 +537,7 @@ function Page() {
         const VUCICM = 'img/izveduvaci/VUCICM.jpg';
         const BIBA = 'img/izveduvaci/BIBADODEVA.jpg';
         const VERICA = 'img/izveduvaci/VERICA.jpg';
-        const ALEKSANDARJ = 'img/izveduvaci/ALEKSANDARJ.jpg';
+        const Reny = 'https://viberatecdn.blob.core.windows.net/entity/artist/reny-farida-sWRmh';
         const Rozy = 'https://yt3.googleusercontent.com/k3FluG3Cks7LH-1dveRTySBs2p7dUgvdDbV_Cd5wE7njxyyiGBL9brJ7xGHaZ5GY6ocrVv-9dg=s900-c-k-c0x00ffffff-no-rj';
         const AlviAnanta = 'https://joox-cms-image-1251316161.file.myqcloud.com/2021/09/28/8cbaa312-151c-4ba3-b28e-52c5be1c2766.jpg/500';
         const DemyYoker = 'https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/c6/6d/ba/c66dba5b-2972-3f16-ba13-f21eb6705287/cover.jpg/1200x1200bb.jpg';
@@ -659,7 +659,7 @@ function Page() {
         else if (artist == 'BTS'){
             var urlCoverArt = BTS;
         }
-        else if (artist == 'Furkan Sert '){
+        else if (artist == 'Furkan Sert'){
             var urlCoverArt = FurkanSert ;
         }
         else if (artist == 'IGOR DZAMBAZOV'){
@@ -788,8 +788,8 @@ function Page() {
         else if (artist  == 'K77 PRETPLADNE SO GABI'){
         var urlCoverArt = POZADINA;
         } 
-        else if (artist =='DNK'){
-            var urlCoverArt = DNK;
+        else if (artist =='Reny Farida'){
+            var urlCoverArt = Reny;
         }
         else if (artist == 'Alvi Ananta'){
             var urlCoverArt = AlviAnanta;
