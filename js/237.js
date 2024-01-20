@@ -104,7 +104,7 @@ function Page() {
         const Lusiana = 'https://id-test-11.slatic.net/p/60eb11ec48bf720ce80a1bab4065e08d.jpg';
         const AlffyRev  = 'https://i.scdn.co/image/ab67616d0000b273d0572746e75788f3a073899b';
         const Caturarum = 'https://i1.sndcdn.com/artworks-000227858822-l8w6ww-t500x500.jpg';
-        const DemyYoker = 'https://cdns.klimg.com/resized/670x/g/1/1/11_fakta_perjalanan_karir_demy_hardi_pedandut_hits_banyuwangi_tak_punya_niatan_jadi_penyanyi_-_terkesan_dengan_fans_anak-anak/p/demy-20211112-006-non_fotografer_kly.jpg';
+        const DemyYoker = 'https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/c6/6d/ba/c66dba5b-2972-3f16-ba13-f21eb6705287/cover.jpg/1200x1200bb.jpg';
         const AlviAnanta = 'https://joox-cms-image-1251316161.file.myqcloud.com/2021/09/28/8cbaa312-151c-4ba3-b28e-52c5be1c2766.jpg/500';
         const BintangTenggara = 'https://thumbs2.imgbox.com/b1/4a/3kNlaBwy_t.jpg';
         const FurkanSert  = 'https://i1.sndcdn.com/artworks-000498456858-0gn1c8-t500x500.jpg';
@@ -540,7 +540,7 @@ function Page() {
         const ALEKSANDARJ = 'img/izveduvaci/ALEKSANDARJ.jpg';
         const EYECUE = 'img/izveduvaci/EYECUE.jpg';
         const AlviAnanta = 'https://joox-cms-image-1251316161.file.myqcloud.com/2021/09/28/8cbaa312-151c-4ba3-b28e-52c5be1c2766.jpg/500';
-        const DemyYoker = 'https://cdns.klimg.com/resized/670x/g/1/1/11_fakta_perjalanan_karir_demy_hardi_pedandut_hits_banyuwangi_tak_punya_niatan_jadi_penyanyi_-_terkesan_dengan_fans_anak-anak/p/demy-20211112-006-non_fotografer_kly.jpg';
+        const DemyYoker = 'https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/c6/6d/ba/c66dba5b-2972-3f16-ba13-f21eb6705287/cover.jpg/1200x1200bb.jpg';
         const Caturarum = 'https://i1.sndcdn.com/artworks-000227858822-l8w6ww-t500x500.jpg';
         const AlffyRev = 'https://i.scdn.co/image/ab67616d0000b273d0572746e75788f3a073899b';
         const Lusiana = 'https://id-test-11.slatic.net/p/60eb11ec48bf720ce80a1bab4065e08d.jpg';
