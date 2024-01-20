@@ -118,16 +118,375 @@ function Page() {
         }, 2000);
     }
 
+     // Artist Covers - Below 
     this.refreshCover = function (song = '', artist) {
-        // Default cover art
+        const JINGLESETELAHIKLAN = "https://cdn.bintangtenggarafm.com/img/dbwvp4y.png";
+        const Commercialbreak = "https://m.media-amazon.com/images/I/81tiNQBu7bL._UF1000,1000_QL80_.jpg";
+        const RadioBintangTenggara = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLSPAs-qRbddzeii-poy3k5Tsz26fYDw8AFeK04iNOxM1HCD6zMOmi5i9bhK6FBGDree32YzCUhiThpyFYr5Cd9A4yiHlOH9MnYPlH3psMW_zzRL0I6yCuMuAA1RvFfGSJEsY0UY3kQjG8xUDSarEVEWBdFS046suoDe25Ar0K8izBvMwrJIZl-aJ_U_1I/s1600/fF8yUE0.png";
+        const SolusiSehat = "https://cdn.bintangtenggarafm.com/img/bYMcyie.png";
+        const TANDAWAKTUSHOLATDHUHUR = "https://thumbs2.imgbox.com/9f/55/fwWLo8Ea_t.jpg";
+        const JINGLE = "https://thumbs2.imgbox.com/9f/91/Dlzeilaz_t.jpg";
+        const JELAJAHDESA = "https://live.staticflickr.com/65535/53458825460_e0e9c45aba.jpg";
+        const TS = "https://images2.imgbox.com/20/89/lHULgj2p_o.jpg";
+        const ADZANMAGHRIB = "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/c1/59/25/c15925c6-d225-d3fb-aba2-29f36a67dd57/717124148517.png/512x512bb.png";
+        const LylaBand = 'https://2.bp.blogspot.com/_RgDaNmR-Ot8/Scs48y51rpI/AAAAAAAAATk/fvRR3DzK6u8/w1200-h630-p-k-no-nu/lyla3.jpg';
+        const WISATABUDAYA = 'https://images2.imgbox.com/7e/dc/vOGdajpd_o.jpg';
+        const Dengarkami = 'https://thumbs2.imgbox.com/3f/c4/yx3lPLHp_t.jpg';
+        const LAGUPENUTUPRADIO = 'https://is4-ssl.mzstatic.com/image/thumb/Music122/v4/ec/3f/64/ec3f643b-0ffd-eb61-9ccf-c8d2c027594f/3ad3589a-548e-4b13-970c-83a2937c7d5c.jpg/500x500bb.jpg';
+        const RENDRAPRASETYO = 'https://live.staticflickr.com/65535/53455348976_e4bc1d6d8c_z.jpg';
+        const RONI = 'https://live.staticflickr.com/65535/53454432287_67f8f2c3a7_n.jpg';
+        const Silvi = 'https://live.staticflickr.com/65535/53455363926_67074fffcc_z.jpg';
+        const NURUL = 'https://live.staticflickr.com/65535/53455379586_f43d29dc84_n.jpg';
+        const BintangTenggara = 'https://thumbs2.imgbox.com/b1/4a/3kNlaBwy_t.jpg';
+        const TOPIC = 'img/izveduvaci/TOPIC.jpg';
+        const SIGALA = 'img/izveduvaci/SIGALA.jpg';
+        const THEA = 'img/izveduvaci/THEA.jpg';
+        const DARIO = 'img/izveduvaci/DARIO.jpg';
+        const BARBARA = 'img/izveduvaci/BARBARA.jpg';
+        const LASTexpedition = 'img/izveduvaci/THELASTEXPEDITION.jpg';
+        const SLAVICAANGELOVA = 'img/izveduvaci/SLAVICAANGELOVA.jpg';
+        const REGARD = 'img/izveduvaci/REGARD.jpeg';
+        const VASILG = 'img/izveduvaci/VASILG.jpg';
+        const SLATKARISTIKA = 'img/izveduvaci/SLATKARISTIKA.jpg';
+        const ALEKSANDARM = 'img/izveduvaci/ALEKSANDARM.jpg';
+        const DZAFER = 'img/izveduvaci/DZAFER.jpg';
+        const BOJS = 'img/izveduvaci/BOJS.jpg';
+        const MIJ = 'img/izveduvaci/MIJ.jpg';
+        const MAJAO = 'img/izveduvaci/MAJAO.jpg';
+        const MAGIJA = 'img/izveduvaci/MAGIJA.jpg';
+        const TOSE = 'img/izveduvaci/TOSE.jpg';
+        const MARIJAN = 'img/izveduvaci/MARIJAN.jpg';
+        const KALIOPI = 'img/izveduvaci/KALIOPI.jpg';
+        const ERZANA = 'img/izveduvaci/ERZANA.jpg';
+        const TRAJCE = 'img/izveduvaci/TRAJCE.jpg';
+        const DZOKSI = 'img/izveduvaci/DZOKSI.jpg';
+        const AREA = 'img/izveduvaci/AREA.jpg';
+        const NOVIDECKI = 'img/izveduvaci/NOVIDECKI.jpg';
+        const EROS = 'img/izveduvaci/EROS.jpg';
+        const JAX = 'img/izveduvaci/JAX.jpg';
+        const REBEKA = 'img/izveduvaci/REBEKA.jpg';
+        const KUKULELE = 'img/izveduvaci/KUKULELE.jpg';
+        const IGOR = 'img/izveduvaci/IGOR.jpg';
+        const DANI = 'img/izveduvaci/DANI.jpg';
+        const BTS = 'https://i.imgur.com/f0nFHPA.jpg';
+        const FurkanSert  = 'https://i1.sndcdn.com/artworks-000498456858-0gn1c8-t500x500.jpg';
+        const ELENAR = 'img/izveduvaci/ELENAR.jpg';
+        const LAMBE = 'img/izveduvaci/LABME.jpg';
+        const VLATKOL = 'img/izveduvaci/VLATKOL.jpg';
+        const JOVANJOVANOV = 'img/izveduvaci/JOVANJOVANOV.jpg';
+        const SKIPIITYZEE = 'img/izveduvaci/SKIPIITYZEE.jpeg';
+        const KAROLINA = 'img/izveduvaci/KAROLINA.jpg';
+        const DULEKOKI = 'img/izveduvaci/DULEKOKI.jpg';
+        const TYZEE = 'img/izveduvaci/TYZEE.jpg';
+        const DIMITAR = 'img/izveduvaci/DIMITAR.jpeg';
+        const ELENAM = 'img/izveduvaci/ELENAM.jpg';
+        const VIKTORIJA = 'img/izveduvaci/VIKTORJALOBA.jpg';
+        const VRCAK = 'img/izveduvac/VRCAK.jpg';
+        const NEXTTIME = 'img/izveduvac/NEXTTIME.jpg';
+        const MEKIC = 'img/izveduvaci/MEKIC.jpg';
+        const VUCICM = 'img/izveduvaci/VUCICM.jpg';
+        const BIBA = 'img/izveduvaci/BIBADODEVA.jpg';
+        const VERICA = 'img/izveduvaci/VERICA.jpg';
+        const Reny = 'https://viberatecdn.blob.core.windows.net/entity/artist/reny-farida-sWRmh';
+        const Rozy = 'https://yt3.googleusercontent.com/k3FluG3Cks7LH-1dveRTySBs2p7dUgvdDbV_Cd5wE7njxyyiGBL9brJ7xGHaZ5GY6ocrVv-9dg=s900-c-k-c0x00ffffff-no-rj';
+        const AlviAnanta = 'https://joox-cms-image-1251316161.file.myqcloud.com/2021/09/28/8cbaa312-151c-4ba3-b28e-52c5be1c2766.jpg/500';
+        const DemyYoker = 'https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/c6/6d/ba/c66dba5b-2972-3f16-ba13-f21eb6705287/cover.jpg/1200x1200bb.jpg';
+        const Caturarum = 'https://i1.sndcdn.com/artworks-000227858822-l8w6ww-t500x500.jpg';
+        const AlffyRev = 'https://i.scdn.co/image/ab67616d0000b273d0572746e75788f3a073899b';
+        const Lusiana = 'https://id-test-11.slatic.net/p/60eb11ec48bf720ce80a1bab4065e08d.jpg';
+        const Syahiba = 'https://i.scdn.co/image/ab67616d00001e02e437ee06c819ae78c68cea8f';
+        const GamelAwan = 'https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/99/b5/ef/99b5ef28-8196-0307-dd64-d3defa86eb50/cover.jpg/640x640bb.png';
+        const Vita = 'https://cdn.idntimes.com/content-images/post/20200914/9d328645-fb36-4cde-8ed3-3942e2dd8bb5-4c61c151c4f9363e53742662069b9bdf.jpeg';
+        const Adistya = 'https://i.scdn.co/image/ab67616d0000b273cac7c5e2d5bf5e61ebcbfae1';
+        const EghaLatoya  = 'https://i1.sndcdn.com/artworks-000145717002-8rm80q-t500x500.jpg';
+        const Suliyana = 'https://p16-tm-sg.tiktokmusic.me/img/tos-alisg-v-2102/22cdcd441a8044a8b77b0334e7606e4c~c5_500x500.jpg';
+   
+        if (artist  == 'JINGLE SETELAH IKLAN') {
+            var urlCoverArt = JINGLESETELAHIKLAN;
+        }
+        else if (artist == 'Commercial break'){
+            var urlCoverArt = Commercialbreak;
+        }
+        else if (artist == 'Radio Bintang Tenggara'){
+            var urlCoverArt = RadioBintangTenggara;
+        }
+        else if (artist == 'Solusi Sehat'){
+            var urlCoverArt = SolusiSehat;
+        }
+        else if (artist == 'TANDA WAKTU SHOLAT DHUHUR'){
+            var urlCoverArt = TANDAWAKTUSHOLATDHUHUR;
+        }
+        else if (artist == 'JINGLE'){
+            var urlCoverArt = JINGLE;
+        }
+        else if (artist == 'JELAJAH DESA'){
+            var urlCoverArt = JELAJAHDESA;
+        }
+        else if (artist == 'TS'){
+            var urlCoverArt = TS;
+        }
+        else if (artist == 'ADZAN MAGHRIB'){
+            var urlCoverArt = ADZANMAGHRIB;
+        }
+        else if (artist == 'Lyla Band'){
+            var urlCoverArt = LylaBand;
+        }
+        else if (artist == 'Wisata Budaya'){
+            var urlCoverArt = WISATABUDAYA;
+        }
+        else if (artist == 'DENGAR KAMI'){
+            var urlCoverArt = DENGARKAMI;
+        }
+        else if (artist == 'LAGU PENUTUP RADIO'){
+            var urlCoverArt = LAGUPENUTUPRADIO;
+        }
+        else if (artist == 'RENDRA PRASETYO'){
+            var urlCoverArt = RENDRAPRASETYO;
+        }
+        else if (artist == 'RONI SANTOSO'){
+            var urlCoverArt = RONI;
+        }
+        else if (artist == 'Silvi Muhtarom'){
+            var urlCoverArt = Silvi;
+        }
+        else if (artist == 'NURUL HIDAYAH'){
+            var urlCoverArt = NURUL;
+        }
+         else if (artist == 'Bintang Tenggara'){
+            var urlCoverArt = BintangTenggara;
+        }
+        else if (artist == 'Furkan Sert'){
+            var urlCoverArt = FurkanSert;
+        }
+        else if (artist == 'VRCAK'){
+            var urlCoverArt = VRCAK;
+        }
+        else if (artist == 'VIKTORIJA LOBA'){
+            var urlCoverArt = VIKTORIJA;
+        }
+        else if (artist == 'THEA'){
+            var urlCoverArt = THEA;
+        }
+        else if (artist == 'ELENA MILENKOVSKA'){
+            var urlCoverArt = ELENAM;
+        }
+        else if (artist == 'DIMITAR ANDONOVSKI'){
+            var urlCoverArt = DIMITAR;
+        }
+        else if (artist == 'TYZEE'){
+            var urlCoverArt = TYZEE;
+        }
+        else if (artist == 'DULE I KOKI'){
+            var urlCoverArt = DULEKOKI;
+        }
+        else if (artist == 'KAROLINA'){
+            var urlCoverArt = KAROLINA;
+        }
+        else if (artist == 'SKIPI I TYZEE'){
+            var urlCoverArt = SKIPIITYZEE;
+        }
+        else if (artist == 'JOVAN JOVANOV'){
+            var urlCoverArt = JOVANJOVANOV;
+        }
+        else if (artist == 'VLATKO LOZANOVSKI'){
+            var urlCoverArt = VLATKOL;
+        }
+        else if (artist == 'LAMBE I LJUPKA'){
+            var urlCoverArt = LAMBE;
+        }
+        else if (artist == 'LAMBE ALABAKOVSKI'){
+            var urlCoverArt = LAMBE;
+        }
+        else if (artist == 'LAMBE'){
+            var urlCoverArt = LAMBE;
+        }
+        else if (artist == 'ELENA RISTESKA'){
+            var urlCoverArt = ELENAR;
+        }
+        else if (artist == 'MAGDALENA CVETKOSKA'){
+            var urlCoverArt = MAGDALENAC;
+        }
+        else if (artist == 'BTS'){
+            var urlCoverArt = BTS;
+        }
+        else if (artist == 'Furkan Sert'){
+            var urlCoverArt = FurkanSert ;
+        }
+        else if (artist == 'IGOR DZAMBAZOV'){
+            var urlCoverArt = IGOR;
+        }
+        else if (artist == 'KUKU LELE'){
+            var urlCoverArt = KUKULELE;
+        }
+        else if (artist == 'REBEKA'){
+            var urlCoverArt = REBEKA;
+        }
+        else if (artist == 'JAX JONES'){
+            var urlCoverArt = JAX;
+        }
+        else if (artist == 'EROS RAMAZZOTTI'){
+            var urlCoverArt = EROS;
+        }
+        else if (artist == 'NOVI DECKI'){
+            var urlCoverArt = NOVIDECKI;
+        }
+        else if (artist == 'AREA'){
+            var urlCoverArt = AREA;
+        }
+        else if (artist == 'DZOKSI'){
+            var urlCoverArt = DZOKSI;
+        }
+        else if (artist == 'ZAKLINA I DZOKSI'){
+            var urlCoverArt = DZOKSI;
+        }
+        else if (artist == 'TRAJCE MANEV'){
+            var urlCoverArt = TRAJCE;
+        }
+        else if (artist == 'DARIO'){
+            var urlCoverArt = DARIO;
+        }
+        else if (artist == 'SNEZANA DZEPOVSKA'){
+            var urlCoverArt = JINGAL;
+        }
+        else if (artist == 'ERZANA'){
+            var urlCoverArt = ERZANA;
+        }
+        else if (artist == 'KALIOPI'){
+            var urlCoverArt = KALIOPI;
+        }
+        else if (artist == 'MARJAN STOJANOVSKI'){
+            var urlCoverArt = MARIJAN;
+        }
+        else if (artist == 'TOSE PROESKI'){
+            var urlCoverArt = TOSE;
+        }
+        else if (artist == 'MAGIJA'){
+            var urlCoverArt = MAGIJA;
+        }
+        else if (artist == 'MAJA ODZAKLIEVSKA'){
+            var urlCoverArt = MAJAO;
+        }
+        else if (artist == 'MARIJANA I ROSANA'){
+            var urlCoverArt = MIJ;
+        }
+        else if (artist == 'DRAGAN KARANFILOVSKI BOJS'){
+            var urlCoverArt = BOJS;
+        }
+        else if (artist == 'MIKI JOVANOVSKI DZAFER'){
+            var urlCoverArt = DZAFER;
+        }
+        else if (artist == 'ALEKSANDAR MITEVSKI'){
+            var urlCoverArt = ALEKSANDARM;
+        }
+        else if (artist == 'SLATKARISTIKA'){
+            var urlCoverArt = SLATKARISTIKA;
+        }
+        else if (artist == 'VASIL GARVANLIEV'){
+            var urlCoverArt = VASILG;
+        }
+        else if (artist == 'SLAVICAANGELOVA'){
+            var urlCoverArt = SLAVICAANGELOVA;
+        }
+        else if (artist == 'REGARD'){
+            var urlCoverArt = REGARD;
+        }
+        else if (artist == 'THE LAST EXPEDITION'){
+            var urlCoverArt = LASTexpedition;
+        }
+        else if (artist == 'BARBARA'){
+            var urlCoverArt = BARBARA;
+        }
+        else if (artist == 'DARIO'){
+            var urlCoverArt = DARIO;
+        }
+        else if (artist == 'THEA'){
+            var urlCoverArt = THEA;
+        }
+        else if (artist == 'SIGALA'){
+            var urlCoverArt = SIGALA;
+        }
+        else if (artist == 'TOPIC'){
+            var urlCoverArt = TOPIC;
+        }
+        else if (artist == 'OGNEN ZDRAVKOVSKI'){
+            var urlCoverArt = ZDRAVKOVSKI;
+        }
+        else if (artist == 'GURU HARE'){
+            var urlCoverArt = HARE;
+        }
+        else if (artist == 'ALEKSANDAR TARABUNOV'){
+            var urlCoverArt = TARABUNOV;
+        }
+        else if (artist == '24KGOLDN'){
+            var urlCoverArt = KGOLDN;
+        }
+        else if (artist == 'ROBIN THICKE'){
+            var urlCoverArt = ROBIN;
+        }
+        else if (artist == 'BILL MEDLEY'){
+            var urlCoverArt = BILL;
+        }
+        else if (artist == 'SELENA GOMEZ'){
+            var urlCoverArt = SELENA;
+        }
+        else if (artist == 'TAMARA TODEVSKA'){
+            var urlCoverArt = TAMARA;
+        }
+        else if (artist == 'BENEE'){
+            var urlCoverArt = BENEE;
+        }
+        else if (artist  == 'K77 PRETPLADNE SO GABI'){
+        var urlCoverArt = POZADINA;
+        } 
+        else if (artist =='Reny Farida'){
+            var urlCoverArt = Reny;
+        }
+        else if (artist == 'Rozy Abdillah'){
+            var urlCoverArt = Rozy;
+        }	
+        else if (artist == 'Alvi Ananta'){
+            var urlCoverArt = AlviAnanta;
+        }
+        else if (artist  == 'Demy Yoker'){
+        var urlCoverArt = DemyYoker;
+        } 
+        else if (artist == 'Catur arum'){
+        var urlCoverArt = Caturarum;
+        }
+        else if (artist == 'Alffy Rev'){
+            var urlCoverArt = AlffyRev;
+        }
+        else if (artist == 'Lusiana Safara'){
+            var urlCoverArt = Lusiana;
+        }
+        else if (artist == 'Syahiba Saufa'){
+            var urlCoverArt = Syahiba;
+        }
+        else if (artist == 'Gamel Awan'){
+            var urlCoverArt = GamelAwan;
+        }
+        else if (artist == 'Vita Alvia'){
+            var urlCoverArt = Vita;
+        }
+        else if (artist == 'Adistya Mayasari'){
+            var urlCoverArt = Adistya;
+        }
+        else if (artist == 'Egha De Latoya'){
+            var urlCoverArt = EghaLatoya;
+        }
+        else if (artist == 'Suliyana'){
+            var urlCoverArt = Suliyana;
+        }
+        else {
         var urlCoverArt = DEFAULT_COVER_ART;
+	    }
 
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             var coverArt = document.getElementById('currentCoverArt');
             var coverBackground = document.getElementById('bgCover');
 
-             // Get cover art URL on iTunes API
+            // Get cover art URL on iTunes API
             if (this.readyState === 4 && this.status === 200) {
                 var data = JSON.parse(this.responseText);
                 var artworkUrl100 = (data.resultCount) ? data.results[0].artworkUrl100 : urlCoverArt;
