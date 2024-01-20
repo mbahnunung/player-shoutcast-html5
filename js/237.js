@@ -250,8 +250,8 @@ function Page() {
         else if (artistRadio == 'Reny Farida'){
             var urlCoverArt = Reny;
         }
-        else if (artistRadio == 'LAMBE'){
-            var urlCoverArt = LAMBE;
+        else if (artistRadio == 'Furkan Sert'){
+            var urlCoverArt = FurkanSert;
         }
         else if (artistRadio == 'ELENA RISTESKA'){
             var urlCoverArt = ELENAR;
@@ -262,7 +262,7 @@ function Page() {
         else if (artistRadio = 'BTS'){
             var urlCoverArt = BTS;
         }
-        else if (artistRadio == 'Furkan Sert '){
+        else if (artistRadio == 'FurkanSert'){
             var urlCoverArt = FurkanSert ;
         }
         else if (artistRadio == 'IGOR DZAMBAZOV'){
