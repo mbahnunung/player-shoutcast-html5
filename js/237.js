@@ -108,7 +108,7 @@ function Page() {
         const AlviAnanta = 'https://joox-cms-image-1251316161.file.myqcloud.com/2021/09/28/8cbaa312-151c-4ba3-b28e-52c5be1c2766.jpg/500';
         const BintangTenggara = 'https://thumbs2.imgbox.com/b1/4a/3kNlaBwy_t.jpg';
         const FurkanSert  = 'https://i1.sndcdn.com/artworks-000498456858-0gn1c8-t500x500.jpg';
-        const DZAFER = 'img/izveduvaci/DZAFER.jpg';
+        const Rozy = 'https://yt3.googleusercontent.com/k3FluG3Cks7LH-1dveRTySBs2p7dUgvdDbV_Cd5wE7njxyyiGBL9brJ7xGHaZ5GY6ocrVv-9dg=s900-c-k-c0x00ffffff-no-rj';
         const BOJS = 'img/izveduvaci/BOJS.jpg';
         const MIJ = 'img/izveduvaci/MIJ.jpg';
         const MAJAO = 'img/izveduvaci/MAJAO.jpg';
@@ -244,8 +244,8 @@ function Page() {
         else if (artistRadio == 'Bintang Tenggara'){
             var urlCoverArt = BintangTenggara;
         }
-        else if (artistRadio == 'LAMBE I LJUPKA'){
-            var urlCoverArt = LAMBE;
+        else if (artistRadio == 'Rozy Abdillah'){
+            var urlCoverArt = Rozy;
         }
         else if (artistRadio == 'LAMBE ALABAKOVSKI'){
             var urlCoverArt = LAMBE;
@@ -538,7 +538,7 @@ function Page() {
         const BIBA = 'img/izveduvaci/BIBADODEVA.jpg';
         const VERICA = 'img/izveduvaci/VERICA.jpg';
         const ALEKSANDARJ = 'img/izveduvaci/ALEKSANDARJ.jpg';
-        const EYECUE = 'img/izveduvaci/EYECUE.jpg';
+        const Rozy = 'https://yt3.googleusercontent.com/k3FluG3Cks7LH-1dveRTySBs2p7dUgvdDbV_Cd5wE7njxyyiGBL9brJ7xGHaZ5GY6ocrVv-9dg=s900-c-k-c0x00ffffff-no-rj';
         const AlviAnanta = 'https://joox-cms-image-1251316161.file.myqcloud.com/2021/09/28/8cbaa312-151c-4ba3-b28e-52c5be1c2766.jpg/500';
         const DemyYoker = 'https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/c6/6d/ba/c66dba5b-2972-3f16-ba13-f21eb6705287/cover.jpg/1200x1200bb.jpg';
         const Caturarum = 'https://i1.sndcdn.com/artworks-000227858822-l8w6ww-t500x500.jpg';
