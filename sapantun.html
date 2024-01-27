@@ -384,15 +384,15 @@ function fetchArtistImage(artist, songName) {
         .then(data => {
         const results = data.results;
         if (results.length > 0) {
-            const artistImage = results[0].artworkUrl100.replace('100x100bb', '512x512bb');
+            const artistImage = results[0].artworkUrl100.replace('100x100bb', '640x640bb');
             updateRadioBackground(artistImage);
         } else {
             const localImageFileName = artistImageMap[artist.toUpperCase()];
             if (localImageFileName) {
-            const localImagePath = `../img/izveduvaci/${localImageFileName}`;
+            const localImagePath = `../img/ic/${localImageFileName}`;
             updateRadioBackground(localImagePath);
             } else {
-            updateRadioBackground('https://radio.kanal77.mk/img/bg-capa.jpg');
+            updateRadioBackground('https://cdn.bintangtenggarafm.com/img/wO8J9xT.jpg');
             }
         }
         })
@@ -400,10 +400,10 @@ function fetchArtistImage(artist, songName) {
         console.error(error);
         const localImageFileName = artistImageMap[artist.toUpperCase()];
         if (localImageFileName) {
-            const localImagePath = `../img/izveduvaci/${localImageFileName}`;
+            const localImagePath = `../img/ic/${localImageFileName}`;
             updateRadioBackground(localImagePath);
         } else {
-            updateRadioBackground('https://radio.kanal77.mk/img/bg-capa.jpg');
+            updateRadioBackground('https://images2.imgbox.com/c8/ed/taMa2znr_o.png');
         }
         });
 }
@@ -417,7 +417,7 @@ function playRadio() {
     audio = new Audio(RadioStanica);
     audio.play();
     fetchSongInfo();
-    document.getElementById('play-button').innerText = 'Стоп';
+    document.getElementById('play-button').innerText = 'Stop';
     document.getElementById('play-button').classList.remove('btn-primary');
     document.getElementById('play-button').classList.add('btn-danger');
 }
@@ -426,7 +426,7 @@ function stopRadio() {
     if (audio) {
         audio.pause();
         audio = null;
-        document.getElementById('play-button').innerText = 'Старт';
+        document.getElementById('play-button').innerText = 'Play';
         document.getElementById('play-button').classList.remove('btn-danger');
         document.getElementById('play-button').classList.add('btn-primary');
     }
@@ -444,7 +444,7 @@ fetchSongInfo();
 setInterval(fetchSongInfo, 5000);
 </script>
 <!--script start-->
-<script src="https://radio.kanal77.mk/safari/js/bootstrap.bundle.min.js"></script>
+<script src="https://webapps1.chicago.gov/cdn/Bootstrap-4.3.1/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://kit.fontawesome.com/7056b27111.js" crossorigin="anonymous"></script>
 
