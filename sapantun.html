@@ -224,7 +224,7 @@ function updatePageTitle(songName, artist) {
 }
 
 function fetchSongInfo() {
-  fetch('https://radio.kanal77.mk/api.php?url=https://radiocnd.mms.mk/proxy/metadata&streamtype=shoutcast&historic=true&next=false&t=1684398759392')
+  fetch('https://api.streamafrica.net/metadata/index.php?z=https://stream.zeno.fm/n4gzbe9ufzzuv')
     .then(response => response.json())
     .then(data => {
       const currentSong = data.currentSong;
