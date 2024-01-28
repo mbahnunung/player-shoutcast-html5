@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+	<title>Shoutcast Radio Player</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="CACHE-CONTROL" CONTENT="NO-CACHE"> 
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery-3.2.1.min.js?v=1.20.09.09b"></script>
+    <script src="js/lunaradio.min.js"></script>
+    <style>
+        html,
+        body {
+            font-family: "Open Sans", sans-serif;
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            color: #272829;
+        }
+    </style>
+    
+   </head>
+
+<body>
+
+
+
+    <div id="player"
+        style="width:100%;  left:0; top:0; z-index: 300; background: #000000 url(img/fondo.jpg) center / cover no-repeat; background-size: cover">
+    </div>
+    <script type="text/javascript">
+		$("#player").lunaradio({
+            userinterface: "big",
+            backgroundcolor: "rgba(9,15,25,0.5)",
+            fontcolor: "#ffffff",
+            hightlightcolor: "#FF0000",
+            fontname: "ZCOOL XiaoWei",
+            googlefont: "ZCOOL+XiaoWei",
+            fontratio: "0.4",
+            radioname: "Pro FM Banyuwangi",
+            scroll: "true",
+            coverimage: "https://i.imgur.com/wO8J9xT.jpg",
+            onlycoverimage: "false",
+            coverstyle: "square",
+            usevisualizer: "real",
+            visualizertype: "8",
+            itunestoken: "1000lIPN",
+            metadatatechnic: "stream-icy-meta", //fallback (usar para zeno)
+            corsproxy: "",
+            usestreamcorsproxy: "false",
+            streamurl: "https://stream.zeno.fm/kc67gypcxghtv",
+            streamtype: "zeno", //soporta: zeno, icecast2, shoutcast2
+            idzeno: "r4mpcrfwfzzuv",
+            icecastmountpoint: "",
+            shoutcastpath: "",
+            shoutcastid: "1",
+            metadatainterval: "10000",
+            volume: "100",
+            debug: "false",
+            autoplay: "true",
+            displayliveicon: "true",
+            visualizeropacity: "1.0",
+            multicolorvisualizer: "true",
+            color1: "#00FF00",
+            color2: "#ffff00",
+            color3: "#FF1F6F",
+            color4: "#FF1F6F",
+        });
+    </script>
+    
+    
+</body>
+</html>
