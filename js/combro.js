@@ -257,17 +257,17 @@ function Page() {
         else if (artistRadio == 'Reny Farida'){
             var urlCoverArt = Reny;
         }
-        else if (artistRadio == 'ELENA RISTESKA'){
-            var urlCoverArt = ELENAR;
+        else if (artistRadio == 'Furkan Sert'){
+            var urlCoverArt = FurkanSert;
         }
-        else if (artistRadio == 'MAGDALENA CVETKOSKA'){
-            var urlCoverArt = MAGDALENAC;
+         else if (artistRadio == 'ELENA RISTESKA'){
+            var urlCoverArt = ELENAR;
         }
         else if (artistRadio = 'BTS'){
             var urlCoverArt = BTS;
         }
-        else if (artistRadio == 'Furkan Sert'){
-            var urlCoverArt = FurkanSert ;
+        else if (artistRadio == 'MAGDALENA CVETKOSKA'){
+            var urlCoverArt = MAGDALENAC;
         }
         else if (artistRadio == 'IGOR DZAMBAZOV'){
             var urlCoverArt = IGOR;
