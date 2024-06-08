@@ -24,8 +24,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 // SELECT ARTWORK PROVIDER, iTunes, Deezer & spotify  eg : spotify 
 var API_SERVICE = 'spotify';
 
-//ZENO ID
-var zenoid = 'n4gzbe9ufzzuv'
+/API URL /
+const API_URL = 'https://twj.es/radio_info/?radio_url='+URL_STREAMING
 
 window.onload = function () {
     var page = new Page;
