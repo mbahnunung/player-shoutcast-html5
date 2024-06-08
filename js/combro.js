@@ -111,7 +111,7 @@ function Page() {
         const AlviAnanta = 'https://joox-cms-image-1251316161.file.myqcloud.com/2021/09/28/8cbaa312-151c-4ba3-b28e-52c5be1c2766.jpg/500';
         const Nyiur = 'https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/a3/56/5c/a3565c6c-c815-816b-08b4-4246b7c9d374/5063292522723_cover.jpg/1200x1200bb.png';
         const FurkanSert  = 'https://i1.sndcdn.com/artworks-000498456858-0gn1c8-t500x500.jpg';
-        const OmpRock = 'https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/51vlBli51VL._UXNaN_FMjpg_QL85_.jpg';
+        const OmpRock = 'https://i1.sndcdn.com/artworks-000069866100-96taaq-t500x500.jpg';
         const Rozy = 'https://yt3.googleusercontent.com/k3FluG3Cks7LH-1dveRTySBs2p7dUgvdDbV_Cd5wE7njxyyiGBL9brJ7xGHaZ5GY6ocrVv-9dg=s900-c-k-c0x00ffffff-no-rj';
         const Reny = 'https://viberatecdn.blob.core.windows.net/entity/artist/reny-farida-sWRmh';
         const MIJ = 'img/izveduvaci/MIJ.jpg';
@@ -541,7 +541,7 @@ function Page() {
         const Rozy = 'https://yt3.googleusercontent.com/k3FluG3Cks7LH-1dveRTySBs2p7dUgvdDbV_Cd5wE7njxyyiGBL9brJ7xGHaZ5GY6ocrVv-9dg=s900-c-k-c0x00ffffff-no-rj';
         const Reny = 'https://viberatecdn.blob.core.windows.net/entity/artist/reny-farida-sWRmh';
         const FurkanSert  = 'https://i1.sndcdn.com/artworks-000498456858-0gn1c8-t500x500.jpg';
-        const OmpRock = 'https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/51vlBli51VL._UXNaN_FMjpg_QL85_.jpg';
+        const OmpRock = 'https://i1.sndcdn.com/artworks-000069866100-96taaq-t500x500.jpg';
         const Nyiur = 'https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/a3/56/5c/a3565c6c-c815-816b-08b4-4246b7c9d374/5063292522723_cover.jpg/1200x1200bb.png';
         const AlviAnanta = 'https://joox-cms-image-1251316161.file.myqcloud.com/2021/09/28/8cbaa312-151c-4ba3-b28e-52c5be1c2766.jpg/500';
         const DemyYoker = 'https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/c6/6d/ba/c66dba5b-2972-3f16-ba13-f21eb6705287/cover.jpg/1200x1200bb.jpg';
