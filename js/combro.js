@@ -525,7 +525,7 @@ function Page() {
         const ELENAM = 'img/izveduvaci/ELENAM.jpg';
         const VIKTORIJA = 'img/izveduvaci/VIKTORJALOBA.jpg';
         const VRCAK = 'img/izveduvac/VRCAK.jpg';
-        const NEXTTIME = 'img/izveduvac/NEXTTIME.jpg';
+        const Kurnia_Dewi = 'https://resources.tidal.com/images/bd1705a5/abba/49dc/ab94/b249c523b790/640x640.jpg';
         const Virgia_Hassan = 'https://i.ytimg.com/vi/g3A7Cp2yAro/maxresdefault.jpg';
         const Rozy = 'https://yt3.googleusercontent.com/k3FluG3Cks7LH-1dveRTySBs2p7dUgvdDbV_Cd5wE7njxyyiGBL9brJ7xGHaZ5GY6ocrVv-9dg=s900-c-k-c0x00ffffff-no-rj';
         const Reny = 'https://viberatecdn.blob.core.windows.net/entity/artist/reny-farida-sWRmh';
@@ -766,8 +766,8 @@ function Page() {
         else if (artist == 'ROBIN THICKE'){
             var urlCoverArt = ROBIN;
         }
-        else if (artist == 'BILL MEDLEY'){
-            var urlCoverArt = BILL;
+        else if (artist == 'Kurnia Dewi'){
+            var urlCoverArt = Kurnia_Dewi;
         }
         else if (artist == 'Virgia Hassan'){
             var urlCoverArt = Virgia_Hassan;
