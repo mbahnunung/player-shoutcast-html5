@@ -389,7 +389,7 @@ function getStreamingData() {
     var d = new Date();
 
     // Requisition with timestamp to prevent cache on mobile devices
-    xhttp.open('GET', 'https://api.zeno.fm/mounts/metadata/subscribe/'+zenoid);
+    xhttp.open('GET', 'https://api.zeno.fm/mounts/metadata/subscribe/n4gzbe9ufzzuv);
     xhttp.send();
 }
 
