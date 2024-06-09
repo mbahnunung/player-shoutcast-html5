@@ -224,7 +224,7 @@ function updatePageTitle(songName, artist) {
 }
 
 function fetchSongInfo() {
-  fetch('https://api.streamafrica.net/metadata/index.php?z=https://stream.zeno.fm/n4gzbe9ufzzuv')
+  fetch('https://api.zeno.fm/mounts/metadata/subscribe/n4gzbe9ufzzuv')
     .then(response => response.json())
     .then(data => {
       const currentSong = data.currentSong;
