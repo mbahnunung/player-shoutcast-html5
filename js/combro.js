@@ -103,7 +103,7 @@ function Page() {
         const OmpRock = 'https://i1.sndcdn.com/artworks-000069866100-96taaq-t500x500.jpg';
         const Rozy = 'https://yt3.googleusercontent.com/k3FluG3Cks7LH-1dveRTySBs2p7dUgvdDbV_Cd5wE7njxyyiGBL9brJ7xGHaZ5GY6ocrVv-9dg=s900-c-k-c0x00ffffff-no-rj';
         const Reny = 'https://viberatecdn.blob.core.windows.net/entity/artist/reny-farida-sWRmh';
-        const MIJ = 'img/izveduvaci/MIJ.jpg';
+        const Virgia_Hassan = 'https://i.ytimg.com/vi/g3A7Cp2yAro/maxresdefault.jpg';
         const MAJAO = 'img/izveduvaci/MAJAO.jpg';
         const MAGIJA = 'img/izveduvaci/MAGIJA.jpg';
         const TOSE = 'img/izveduvaci/TOSE.jpg';
@@ -249,8 +249,8 @@ function Page() {
         else if (artistRadio == 'Furkan Sert'){
             var urlCoverArt = FurkanSert;
         }
-         else if (artistRadio == 'ELENA RISTESKA'){
-            var urlCoverArt = ELENAR;
+         else if (artistRadio == 'Virgia Hassan'){
+            var urlCoverArt = Virgia_Hassan;
         }
         else if (artistRadio = 'BTS'){
             var urlCoverArt = BTS;
