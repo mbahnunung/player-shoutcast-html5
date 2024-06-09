@@ -264,7 +264,7 @@ function processData(data) {
     // Parse JSON
     const parsedData = JSON.parse(data);
     
-    // Verificar se a mensagem é sobre a música
+    // Check if the message is about the song
     if (parsedData.streamTitle) {
         // Extrair o título da música e o artista
         let artist, song;
@@ -294,7 +294,7 @@ function processData(data) {
     }
 }
 
-// Iniciar a conexão com a API
+// Start connecting to the API
 connectToEventSource(url);
 
 // Define a função de manipulação da resposta da API do Deezer no escopo global
@@ -313,8 +313,8 @@ function handleDeezerResponse(data, song) {
 
         coverBackground.style.backgroundImage = 'url(' + artworkUrl + ')';
     } else {
-        // Caso não haja dados ou a lista de dados esteja vazia,
-        // defina a capa padrão
+        // If there is no data or the data list is empty,
+        // set default cover
         var defaultArtworkUrl = 'img/cover.png';
 
         coverArt.style.backgroundImage = 'url(' + defaultArtworkUrl + ')';
