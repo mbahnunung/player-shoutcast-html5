@@ -224,7 +224,7 @@ function updatePageTitle(songName, artist) {
 }
 
 function fetchSongInfo() {
-  fetch('https://api.zeno.fm/mounts/metadata/subscribe/n4gzbe9ufzzuv')
+  fetch('https://twj.es/radio_info/?radio_url=https://stream.zeno.fm/n4gzbe9ufzzuv')
     .then(response => response.json())
     .then(data => {
       const currentSong = data.currentSong;
