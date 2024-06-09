@@ -1,10 +1,10 @@
 const RADIO_NAME = 'Jailson Webradio';
 
 // Change Stream URL Here, Supports, ICECAST, ZENO, SHOUTCAST, RADIOJAR and any other stream service.
-const URL_STREAMING = 'https://stream.zeno.fm/n4gzbe9ufzzuv';
+const URL_STREAMING = 'https://stream.zeno.fm/r4mpcrfwfzzuv';
 
 // Change API URL Here
-const url = 'https://api.zeno.fm/mounts/metadata/subscribe/n4gzbe9ufzzuv';
+const url = 'https://api.zeno.fm/mounts/metadata/subscribe/r4mpcrfwfzzuv';
 
 // Visit https://api.vagalume.com.br/docs/ to get your API key
 const API_KEY = "18fe07917957c289983464588aabddfb";
