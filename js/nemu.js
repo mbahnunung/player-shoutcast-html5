@@ -1,16 +1,16 @@
-const RADIO_NAME = 'Jailson Webradio';
+const RADIO_NAME = 'mbah nunung';
 
 // Change Stream URL Here, Supports, ICECAST, ZENO, SHOUTCAST, RADIOJAR and any other stream service.
-const URL_STREAMING = 'https://stream.zeno.fm/r4mpcrfwfzzuv';
+const URL_STREAMING = 'https://stream.zeno.fm/n4gzbe9ufzzuv';
 
 // Change API URL Here
-const url = 'https://api.zeno.fm/mounts/metadata/subscribe/r4mpcrfwfzzuv';
+const url = 'https://api.zeno.fm/mounts/metadata/subscribe/n4gzbe9ufzzuv';
 
 // Visit https://api.vagalume.com.br/docs/ to get your API key
 const API_KEY = "18fe07917957c289983464588aabddfb";
 
 // Variable to control history display: true = display / false = hides
-let showHistory = false; 
+let showHistory = true; 
 
 window.onload = function () {
     var page = new Page;
