@@ -236,7 +236,7 @@ function Page() {
         else if (artistRadio == 'Alffy Rev'){
             var urlCoverArt = AlffyRev;
         }
-        else if (artistRadio == 'Catur arum'){
+        else if (artistRadio == 'Catur Arum'){
             var urlCoverArt = Caturarum;
         }
         else if (artistRadio == 'Demy Yoker'){
@@ -801,7 +801,7 @@ function Page() {
         else if (artist  == 'Demy Yoker'){
         var urlCoverArt = DemyYoker;
         } 
-        else if (artist == 'Catur arum'){
+        else if (artist == 'Catur Arum'){
         var urlCoverArt = Caturarum;
         }
         else if (artist == 'Alffy Rev'){
