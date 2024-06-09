@@ -63,7 +63,7 @@ class Page {
             }
         };
 
-        // Função para atualizar a capa
+        // Function to update the cover
         this.refreshCover = function (song = '', artist) {
             // Default cover art
             var urlCoverArt = 'img/cover.png';
