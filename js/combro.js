@@ -526,7 +526,7 @@ function Page() {
         const VIKTORIJA = 'img/izveduvaci/VIKTORJALOBA.jpg';
         const VRCAK = 'img/izveduvac/VRCAK.jpg';
         const NEXTTIME = 'img/izveduvac/NEXTTIME.jpg';
-        const MEKIC = 'img/izveduvaci/MEKIC.jpg';
+        const Virgia_Hassan = 'https://i.ytimg.com/vi/g3A7Cp2yAro/maxresdefault.jpg';
         const Rozy = 'https://yt3.googleusercontent.com/k3FluG3Cks7LH-1dveRTySBs2p7dUgvdDbV_Cd5wE7njxyyiGBL9brJ7xGHaZ5GY6ocrVv-9dg=s900-c-k-c0x00ffffff-no-rj';
         const Reny = 'https://viberatecdn.blob.core.windows.net/entity/artist/reny-farida-sWRmh';
         const FurkanSert  = 'https://i1.sndcdn.com/artworks-000498456858-0gn1c8-t500x500.jpg';
@@ -769,8 +769,8 @@ function Page() {
         else if (artist == 'BILL MEDLEY'){
             var urlCoverArt = BILL;
         }
-        else if (artist == 'SELENA GOMEZ'){
-            var urlCoverArt = SELENA;
+        else if (artist == 'Virgia Hassan'){
+            var urlCoverArt = Virgia_Hassan;
         }
         else if (artist =='Reny Farida'){
             var urlCoverArt = Reny;
