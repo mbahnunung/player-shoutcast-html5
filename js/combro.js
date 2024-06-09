@@ -252,11 +252,11 @@ function Page() {
          else if (artistRadio == 'Virgia Hassan'){
             var urlCoverArt = Virgia_Hassan;
         }
-        else if (artistRadio = 'BTS'){
-            var urlCoverArt = BTS;
-        }
         else if (artistRadio == 'Kurnia Dewi'){
             var urlCoverArt = Kurnia_Dewi;
+        }
+        else if (artistRadio == 'Kurnia'){
+            var urlCoverArt = Kurnia;
         }
         else if (artistRadio == 'IGOR DZAMBAZOV'){
             var urlCoverArt = IGOR;
