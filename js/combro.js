@@ -104,7 +104,7 @@ function Page() {
         const Rozy = 'https://yt3.googleusercontent.com/k3FluG3Cks7LH-1dveRTySBs2p7dUgvdDbV_Cd5wE7njxyyiGBL9brJ7xGHaZ5GY6ocrVv-9dg=s900-c-k-c0x00ffffff-no-rj';
         const Reny = 'https://viberatecdn.blob.core.windows.net/entity/artist/reny-farida-sWRmh';
         const Virgia_Hassan = 'https://i.ytimg.com/vi/g3A7Cp2yAro/maxresdefault.jpg';
-        const Kurnia_Dewi = 'https://resources.tidal.com/images/bd1705a5/abba/49dc/ab94/b249c523b790/640x640.jpg';
+        const Kurnia_Dewi = 'https://i.imgur.com/9H315Oi.jpg';
         const MAGIJA = 'img/izveduvaci/MAGIJA.jpg';
         const TOSE = 'img/izveduvaci/TOSE.jpg';
         const MARIJAN = 'img/izveduvaci/MARIJAN.jpg';
@@ -525,7 +525,7 @@ function Page() {
         const ELENAM = 'img/izveduvaci/ELENAM.jpg';
         const VIKTORIJA = 'img/izveduvaci/VIKTORJALOBA.jpg';
         const VRCAK = 'img/izveduvac/VRCAK.jpg';
-        const Kurnia_Dewi = 'https://resources.tidal.com/images/bd1705a5/abba/49dc/ab94/b249c523b790/640x640.jpg';
+        const Kurnia_Dewi = 'https://i.imgur.com/9H315Oi.jpg';
         const Virgia_Hassan = 'https://i.ytimg.com/vi/g3A7Cp2yAro/maxresdefault.jpg';
         const Rozy = 'https://yt3.googleusercontent.com/k3FluG3Cks7LH-1dveRTySBs2p7dUgvdDbV_Cd5wE7njxyyiGBL9brJ7xGHaZ5GY6ocrVv-9dg=s900-c-k-c0x00ffffff-no-rj';
         const Reny = 'https://viberatecdn.blob.core.windows.net/entity/artist/reny-farida-sWRmh';
