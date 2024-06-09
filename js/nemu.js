@@ -385,13 +385,13 @@ function getStreamingData(data) {
 
     if (showHistory) {
 
-        // Verificar se a música é diferente da última atualizada
+        // Check if the song is different from the last updated one
         if (musicHistory.length === 0 || (musicHistory[0].song !== song)) {
             // Atualizar o histórico com a nova música
             updateMusicHistory(artist, song);
         }
 
-        // Atualizar a interface do histórico
+        // Update the history interface
         updateHistoryUI();
 
     }
@@ -406,15 +406,15 @@ function updateHistoryUI() {
     }
 }
 
-// Variável global para armazenar o histórico das duas últimas músicas
+// Global variable to store the history of the last two songs
 var musicHistory = [];
 
-// Função para atualizar o histórico das duas últimas músicas
+// Function to update the history of the last two songs
 function updateMusicHistory(artist, song) {
-    // Adicionar a nova música no início do histórico
+    // Add the new song to the beginning of the history
     musicHistory.unshift({ artist: artist, song: song });
 
-    // Manter apenas as duas últimas músicas no histórico
+    // Keep only the last two songs in history
     if (musicHistory.length > 4) {
         musicHistory.pop(); // Remove a música mais antiga do histórico
     }
@@ -429,15 +429,15 @@ function displayHistory() {
     var $songName = document.querySelectorAll('#historicSong article .music-info .song');
     var $artistName = document.querySelectorAll('#historicSong article .music-info .artist');
 
-    // Exibir as duas últimas músicas no histórico, começando do índice 1 para excluir a música atual
+    // Display the last two songs in history, starting from index 1 to delete the current song
     for (var i = 1; i < musicHistory.length && i < 3; i++) {
         $songName[i - 1].innerHTML = musicHistory[i].song;
         $artistName[i - 1].innerHTML = musicHistory[i].artist;
 
-        // Chamar a função para buscar a capa da música na API do Deezer
+        // Call the function to search for the song cover in the Deezer API
         refreshCoverForHistory(musicHistory[i].song, musicHistory[i].artist, i - 1);
 
-        // Adicionar classe para animação
+        // Add class for animation
         $historicDiv[i - 1].classList.add('animated');
         $historicDiv[i - 1].classList.add('slideInRight');
     }
@@ -451,14 +451,14 @@ function displayHistory() {
     }, 2000);
 }
 
-// Função para atualizar a capa da música no histórico
+// Function to update song cover in history
 function refreshCoverForHistory(song, artist, index) {
-    // Criação da tag de script para fazer a requisição JSONP à API do Deezer
+    // Creation of the script tag to make the JSONP request to the Deezer API
     const script = document.createElement('script');
     script.src = `https://api.deezer.com/search?q=${encodeURIComponent(artist)} ${encodeURIComponent(song)}&output=jsonp&callback=handleDeezerResponseForHistory_${index}`;
     document.body.appendChild(script);
 
-    // Função de manipulação da resposta da API do Deezer para o histórico de músicas
+    // Deezer API response handling function for music history
     window['handleDeezerResponseForHistory_' + index] = function (data) {
         if (data.data && data.data.length > 0) {
             // Atualizar a capa pelo nome do artista
