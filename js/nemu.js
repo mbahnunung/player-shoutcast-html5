@@ -372,11 +372,11 @@ function getStreamingData(data) {
 
     var page = new Page();
 
-    // Formatar caracteres para UTF-8
+    // Format characters to UTF-8
     let song = jsonData.currentSong.replace(/&apos;/g, '\'').replace(/&amp;/g, '&');
     let artist = jsonData.currentArtist.replace(/&apos;/g, '\'').replace(/&amp;/g, '&');
 
-    // Mudar o título
+    // Change the title
     document.title = song + ' - ' + artist + ' | ' + RADIO_NAME;
 
     page.refreshCover(song, artist);
