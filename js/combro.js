@@ -14,7 +14,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 var API_SERVICE = 'spotify';
 
 /API URL /
-const API_URL = 'https://twj.es/radio_info/?radio_url='+URL_STREAMING
+const API_URL = 'https://twj.es/radio_info/?radio_url=' + encodeURIComponent(URL_STREAMING);
 
 window.onload = function () {
     var page = new Page;
