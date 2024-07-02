@@ -1,4 +1,4 @@
-const RADIO_NAME = 'Your Radio';
+const RADIO_NAME = 'Radio Suara Soneta';
 
 // Change Azuracast Stream URL Here, .
 const URL_STREAMING = 'https://a2.siar.us/listen/suarasoneta/radio.mp3';
