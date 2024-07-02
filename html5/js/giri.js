@@ -1,10 +1,10 @@
 const RADIO_NAME = 'Your Radio';
 
 // Change Azuracast Stream URL Here, .
-const URL_STREAMING = 'https://azuracast.suzananet.com/listen/suara_giri_fm/radio';
+const URL_STREAMING = 'https://azuracast.suzananet.com/listen/ebs_fm/radio';
 
 //API URL Azuracast Now Playing
-const API_URL = 'https://azuracast.suzananet.com/api/nowplaying/suara_giri_fm';
+const API_URL = 'https://azuracast.suzananet.com/api/nowplaying/7';
 
 // Visit https://api.vagalume.com.br/docs/ to get your API key
 const API_KEY = "18fe07917957c289983464588aabddfb";
