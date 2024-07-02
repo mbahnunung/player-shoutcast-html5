@@ -10,7 +10,7 @@ const API_URL = 'https://a2.siar.us/api/nowplaying/41';
 const API_KEY = "18fe07917957c289983464588aabddfb";
 
 // Change DEFAULT COVER
-const DEFAULT_COVER_ART = 'https://azuracast.suzananet.com/static/uploads/ebs_fm/album_art.1697175139.png';
+const DEFAULT_COVER_ART = 'https://a2.siar.us/static/uploads/suarasoneta/album_art.1676019486.png';
 
 // Variable to control history display: true = display / false = hides
 let showHistory = true; 
