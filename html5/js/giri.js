@@ -9,6 +9,9 @@ const API_URL = 'https://azuracast.suzananet.com/api/nowplaying/7';
 // Visit https://api.vagalume.com.br/docs/ to get your API key
 const API_KEY = "18fe07917957c289983464588aabddfb";
 
+// Change DEFAULT COVER
+const DEFAULT_COVER_ART = 'https://azuracast.suzananet.com/static/uploads/ebs_fm/album_art.1697175139.png';
+
 // Variable to control history display: true = display / false = hides
 let showHistory = true; 
 
