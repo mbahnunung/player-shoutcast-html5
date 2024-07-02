@@ -93,18 +93,31 @@ body {
 }
 
 .info-current-song {
-    font-family: 'Share', sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
 }
 
 .info-current-song h2 {
-    font-size: 22px;
-    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin: 0 0 .0125em;
+    text-shadow: 2px 2px #303030;
+}
+.info-current-song h3 {
+    font-size: 1rem;   
+    font-weight: 600;
+    text-shadow: 2px 2px #303030;
 }
 
-.info-current-song h3 {
-    font-size: 18px;
-    font-weight: 400;
+.current-song {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+
+}
+
+.current-artist {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+
 }
 
 .play-pause {
@@ -112,22 +125,22 @@ body {
 }
 
 .play-pause i {
-    cursor: pointer;
+    color: rgba(221,81,16,1)!important;
 }
 
 .volume-icon {
-    font-size: 22px;
+    font-size: 31px;
     margin-top: -5px;
 }
 
 .volume-slide {
-    line-height: 35px;
+     line-height:29px;
+     margin-top:0;font-size:28px;
 }
 
 .volume-control {
     display: none;
 }
-
 .vagalume a {
     color: #fff;
     text-decoration: underline;
@@ -277,18 +290,17 @@ input[type=range]::-ms-thumb {
 }
 
 .historic .music-info {
-    color: #fff;
-    font-family: 'Share', sans-serif;
+    color: white;
+    font-family: 'Poppins', sans-serif;
 }
-
 .historic .music-info .song {
     width: 100%;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     text-transform: uppercase;
     margin-bottom: -5px;
     color: white;
-}
+	text-shadow: 2px 2px #303030;
 
 @media(max-width: 370px) {
     .cover-album {
